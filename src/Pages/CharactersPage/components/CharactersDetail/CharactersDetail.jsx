@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from '../../../../shared/consts/api.consts';
+import './CharacterDetail.scss';
 
 
 export function CharactersDetail() {
@@ -9,51 +10,80 @@ export function CharactersDetail() {
 
     const [character, setCharacter] = useState([]);
 
+    console.log(character);
+
     const getCharacterDetail = () => {
         API.get("show/characters/" + characterName).then((res) => {
             setCharacter(res.data);
-            console.log(res.data);
         });
     };
 
     useEffect(getCharacterDetail, []);
 
+
     const allegiances = character.allegiances;
 
-    const listAllegiances = [];
+    const listAllegiances = allegiances.map((allegiance) =>
+        <li>{allegiance}</li>
+    );
 
-    for (const [i, allegiance] of products.entries()) {
-        list.push(<li>{product}</li>)
-    }
+
+    const appearances = character.appearances;
+
+    const listAppearances = appearances.map((appearance) =>
+        <li>{appearance}</li>
+    );
+
+    const siblings = character.siblings;
+
+    const listSiblings = siblings.map((sibling) =>
+        <li>{sibling}</li>
+    );
+
+    const titles = character.titles;
+
+    const listTitles = titles.map((title) =>
+        <li>{title}</li>
+    );
 
     return (
         <div>
-            <h1>Pagina detalles</h1>
             {character && <div>
                 <figure>
-                    <img src={character.image} alt="" />
+                    <img className="img--Character--Detail" src={character.image} alt="" />
                     <figcaption>{character.name}</figcaption>
                 </figure>
-                <div>
+                <div className="row">
                     <div>
                         <h2>CASA</h2>
-
                     </div>
                     <div>
                         <h2>ALIANZAS</h2>
-                        <ul>{ }</ul>
+                        <ul>
+                            {listAllegiances}
+                        </ul>
                     </div>
                     <div>
                         <h2>APARICIONES</h2>
+                        <ul>
+                            {listAppearances}
+                        </ul>
                     </div>
                     <div>
                         <h2>PADRE</h2>
+                        <p>{character.father}</p>
                     </div>
                     <div>
                         <h2>DESCENDIENTES</h2>
+                        <ul>
+                            {listSiblings}
+                        </ul>
                     </div>
                     <div>
                         <h2>TITULOS</h2>
+                        <ul>
+                            {listTitles}
+                        </ul>
                     </div>
                 </div>
             </div>
