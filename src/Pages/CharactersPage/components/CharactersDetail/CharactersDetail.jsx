@@ -12,7 +12,7 @@ export function CharactersDetail() {
     const getCharacterDetail = () => {
         API.get("/characters/" + characterName).then((res) => {
             setCharacter(res.data.character);
-            console.log(res.data);
+            console.log(res.data.character);
         });
     };
 
@@ -20,13 +20,10 @@ export function CharactersDetail() {
 
     return (
         <div>
-            {/* {character && <figure>
+            {character && <figure>
                 <img src={character.image} alt="" />
                 <figcaption>{character.name}</figcaption>
-                <p>{ }</p>
-                <p>{ }</p>
-                <p>{ }</p>
-            </figure>} */}
+            </figure>}
         </div>
     );
 }
