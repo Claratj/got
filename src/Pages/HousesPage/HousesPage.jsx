@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { API } from "../../shared/consts/api.consts";
+import { HousesGallery } from "./components/HousesGallery/HousesGallery";
 
-export function HousesPage(){
+export function HousesPage() {
+  const [houses, setHouses] = useState([]);
 
-    return(
-        <div><h1>WELCOME TO HOUSES</h1> </div>
-    );
+  const getHouses = () => {
+    API.get("show/houses").then((res) => {
+      setHouses(res.data);
+      console.log(res.data);
+    });
+  };
+
+  useEffect(getHouses, []);
+
+  return (
+    <div>
+      <HousesGallery houses={houses}/>
+    </div>
+  );
 }
