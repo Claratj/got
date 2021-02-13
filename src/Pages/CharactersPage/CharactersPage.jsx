@@ -3,6 +3,7 @@ import { API } from "../../shared/consts/api.consts";
 import { CharactersGallery } from "./components/CharactersGallery/CharactersGallery";
 
 
+
 export function CharactersPage() {
 
     const [characters, setCharacters] = useState([]);
@@ -17,7 +18,7 @@ export function CharactersPage() {
     useEffect(getCharacters, []);
 
     return (
-        <div>
+        <div class="">
             <CharactersGallery characters={characters} />
         </div>
     );

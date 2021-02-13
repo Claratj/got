@@ -10,9 +10,9 @@ export function CharactersDetail() {
     const [character, setCharacter] = useState([]);
 
     const getCharacterDetail = () => {
-        API.get("/characters/" + characterName).then((res) => {
-            setCharacter(res.data.character);
-            console.log(res.data.character);
+        API.get("show/characters/" + characterName).then((res) => {
+            setCharacter(res.data);
+            console.log(res.data);
         });
     };
 
@@ -20,6 +20,7 @@ export function CharactersDetail() {
 
     return (
         <div>
+            <h1>Pagina detalles</h1>
             {character && <figure>
                 <img src={character.image} alt="" />
                 <figcaption>{character.name}</figcaption>

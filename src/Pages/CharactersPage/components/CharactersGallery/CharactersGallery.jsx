@@ -18,9 +18,10 @@ export function CharactersGallery(props) {
                     </Link>
                 </div>
 
-            )}
-
+            )};
         </div>
+
+
 
     );
 }
