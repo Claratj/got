@@ -18,33 +18,44 @@ export function CharactersDetail() {
         });
     };
 
-    useEffect(getCharacterDetail, []);
-
 
     const allegiances = character.allegiances;
-
-    const listAllegiances = allegiances.map((allegiance) =>
-        <li>{allegiance}</li>
-    );
-
-
+    let listAllegiances = [];
     const appearances = character.appearances;
-
-    const listAppearances = appearances.map((appearance) =>
-        <li>{appearance}</li>
-    );
-
+    let listAppearances = [];
     const siblings = character.siblings;
-
-    const listSiblings = siblings.map((sibling) =>
-        <li>{sibling}</li>
-    );
-
+    let listSiblings = [];
     const titles = character.titles;
+    let listTitles = [];
 
-    const listTitles = titles.map((title) =>
-        <li>{title}</li>
-    );
+    if (allegiances != undefined) {
+
+        listAllegiances = allegiances.map((allegiance) =>
+            <li>{allegiance}</li>
+        );
+    }
+
+    if (appearances != undefined) {
+        listAppearances = appearances.map((appearance) =>
+            <li>{appearance}</li>
+        );
+    }
+
+
+    if (siblings != undefined) {
+        listSiblings = siblings.map((sibling) =>
+            <li>{sibling}</li>
+        );
+    }
+
+
+    if (titles != undefined) {
+        listTitles = titles.map((title) =>
+            <li>{title}</li>
+        );
+    }
+
+    useEffect(getCharacterDetail, []);
 
     return (
         <div>
