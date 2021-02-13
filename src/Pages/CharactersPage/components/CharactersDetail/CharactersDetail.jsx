@@ -18,13 +18,46 @@ export function CharactersDetail() {
 
     useEffect(getCharacterDetail, []);
 
+    const allegiances = character.allegiances;
+
+    const listAllegiances = [];
+
+    for (const [i, allegiance] of products.entries()) {
+        list.push(<li>{product}</li>)
+    }
+
     return (
         <div>
             <h1>Pagina detalles</h1>
-            {character && <figure>
-                <img src={character.image} alt="" />
-                <figcaption>{character.name}</figcaption>
-            </figure>}
+            {character && <div>
+                <figure>
+                    <img src={character.image} alt="" />
+                    <figcaption>{character.name}</figcaption>
+                </figure>
+                <div>
+                    <div>
+                        <h2>CASA</h2>
+
+                    </div>
+                    <div>
+                        <h2>ALIANZAS</h2>
+                        <ul>{ }</ul>
+                    </div>
+                    <div>
+                        <h2>APARICIONES</h2>
+                    </div>
+                    <div>
+                        <h2>PADRE</h2>
+                    </div>
+                    <div>
+                        <h2>DESCENDIENTES</h2>
+                    </div>
+                    <div>
+                        <h2>TITULOS</h2>
+                    </div>
+                </div>
+            </div>
+            }
         </div>
     );
 }
