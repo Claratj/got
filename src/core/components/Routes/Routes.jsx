@@ -4,12 +4,19 @@ import { CharactersPage } from "../../../Pages/CharactersPage/CharactersPage";
 import { ChronologyPage } from "../../../Pages/ChronologyPage/ChronologyPage";
 import { HomePage } from "../../../Pages/HomePage/HomePage";
 import { HousesPage } from "../../../Pages/HousesPage/HousesPage";
+import { HouseDetailPage } from "../../../Pages/HousesPage/Page/HouseDetailPage/HouseDetailPage";
 
 export function Routes() {
   return (
     <Switch>
       <Route path="/characters">
         <CharactersPage />
+      </Route>
+      <Route path="/houses/:houseName">
+        <HouseDetailPage/>
+      </Route>
+      <Route path="/houses">
+        <HousesPage />
       </Route>
       <Route path="/houses">
         <HousesPage />
