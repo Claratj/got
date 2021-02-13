@@ -20,8 +20,5 @@ export function CharactersGallery(props) {
 
             )};
         </div>
-
-
-
     );
 }
