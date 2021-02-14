@@ -9,15 +9,20 @@ export function CharactersDetail() {
     const { characterName } = useParams();
 
     const [character, setCharacter] = useState([]);
+    const [house, setHouse] = useState([]);
 
-    console.log(character);
 
     const getCharacterDetail = () => {
         API.get("show/characters/" + characterName).then((res) => {
             setCharacter(res.data);
+
+
+            API.get("show/houses/" + res.data.house).then((res2) => {
+                setHouse(res2.data[0]);
+                // console.log(res2.data[0]);
+            })
         });
     };
-
 
     const allegiances = character.allegiances;
     let listAllegiances = [];
@@ -67,6 +72,7 @@ export function CharactersDetail() {
                 <div className="row">
                     <div>
                         <h2>CASA</h2>
+                        {house !== null &&<img src={house.logoURL} /> }
                     </div>
                     <div>
                         <h2>ALIANZAS</h2>

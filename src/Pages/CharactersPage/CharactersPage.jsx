@@ -11,7 +11,6 @@ export function CharactersPage() {
     const getCharacters = () => {
         API.get("show/characters").then((res) => {
             setCharacters(res.data);
-            console.log(res.data);
         });
     };
 
