@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { API } from "../../shared/consts/api.consts";
+import { CharactersGallery } from "./components/CharactersGallery/CharactersGallery";
 
-export function CharactersPage(){
 
-    return(
-        <div><h1>WELCOME TO CHARACTERS</h1> </div>
+
+export function CharactersPage() {
+
+    const [characters, setCharacters] = useState([]);
+
+    const getCharacters = () => {
+        API.get("show/characters").then((res) => {
+            setCharacters(res.data);
+        });
+    };
+
+    useEffect(getCharacters, []);
+
+    return (
+        <div class="">
+            <CharactersGallery characters={characters} />
+        </div>
     );
 }
