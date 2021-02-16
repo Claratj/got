@@ -71,7 +71,7 @@ export function ChronologyPage () {
       return (
         <div>
 
-          <button onClick={reverseTimelineOrder}>ORDENAR EDAD</button>
+          <button onClick={reverseTimelineOrder}>{ascendingOrder ? 'Flecha arriba' : 'Flecha abajo'}</button>
             {timeline.map((item, i) =>
               <div key={i}>
                 <p> {item.age && item.age.age} </p>

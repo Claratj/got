@@ -6,7 +6,6 @@ export function Header() {
 
             <div>
                 <img src="../../../assets/img/spain.svg"/>
-                
             </div>
 
             <div>
