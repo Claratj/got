@@ -1,0 +1,56 @@
+body{
+    background-color: #000000;
+}
+
+.c-houses-gallery{
+    &__img{
+        height: 297px;
+        object-fit: contain;
+    }
+
+    &__figure{
+        margin:0;
+        
+
+    }
+
+    &__figcaption{
+        color: white;
+        font-size: 14px;
+    }
+
+    &__scroll{
+        height: 500px;
+        overflow: auto;
+    }
+    &__scroll::-webkit-scrollbar {
+        width: 3px;
+    }
+    &__scroll::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 4px;
+    }
+    &__scroll::-webkit-scrollbar-thumb:active {
+        background-color: white;
+    }
+    &__scroll::-webkit-scrollbar-thumb:hover {
+        background: #383737;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &__scroll::-webkit-scrollbar-track {
+        background: #383737;
+        border-radius: 4px;
+    }
+    &__scroll::-webkit-scrollbar-track:active {
+        background: #383737;
+    }
+    &__scroll::-webkit-scrollbar-track:hover{
+        background: #383737;
+    }
+      
+}
+
+.search-container{
+    margin-bottom: 40px;
+}
+

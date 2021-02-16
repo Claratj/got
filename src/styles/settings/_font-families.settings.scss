@@ -1,0 +1,14 @@
+:root{
+    --font-family-base : Got;
+    --font-family-houses:Lato-Regular;
+}
+
+@font-face{
+    font-family: Got;
+    src: url(../../assets/fonts/Got.ttf)
+}
+
+@font-face{
+    font-family: Lato-Regular;
+    src: url(../../assets/fonts/Lato-Regular.ttf)
+}

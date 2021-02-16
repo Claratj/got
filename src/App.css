@@ -1,6 +1,13 @@
+body{
+  font-family: var(--font-family-base);
+  color: white;
+}
+
 .App {
   text-align: center;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
