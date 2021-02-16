@@ -5,11 +5,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <Routes />
-        </header>
+      
+      <div style={{width:"90%",margin:"auto"}}>
+        <Routes />
       </div>
+      
     </Router>
   );
 }
