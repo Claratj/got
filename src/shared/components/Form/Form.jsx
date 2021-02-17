@@ -1,5 +1,5 @@
 import React from 'react';
-import "./HousesForm.scss";
+import "./Form.scss";
 
 export function HousesForm(props){
 
