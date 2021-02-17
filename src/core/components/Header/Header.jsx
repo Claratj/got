@@ -7,11 +7,11 @@ export function Header() {
         <nav>
 
             <li>
-                <img src={spainFlag}/>
+                <img src={spainFlag} alt='SP'/>
             </li>
 
             <li>
-                <img src={ukFlag}/>
+                <img src={ukFlag} alt='EN'/>
             </li>
 
         </nav>

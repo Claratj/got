@@ -71,9 +71,9 @@ export function ChronologyPage () {
       return (
         <div>
 
-          <button onClick={reverseTimelineOrder}>
+          <a onClick={reverseTimelineOrder}>
             {ascendingOrder ? <span className="icon-circle-up"></span> 
-            : <span className="icon-circle-down"></span>}</button>
+            : <span className="icon-circle-down"></span>}</a>
             {timeline.map((item, i) =>
               <div key={i}>
                 <p> {item.age && item.age.age} </p>
