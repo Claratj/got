@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../shared/consts/api.consts';
+import { LoadingContext } from '../../core/components/Loading/contexts/LoadingContext';
 
 
 export function ChronologyPage () {
 
+    const {setIsLoading} = useContext(LoadingContext);
+
     const [timeline, setTimeline] = useState([]);
 
     //establecemos por defecto el orden en false
-    let ascendingOrder = false;
+    let [ascendingOrder, setAscendingOrder] = useState(false);
 
     const getChronology = () => {
+
+        setIsLoading(true);
         //llamada a la api
         API.get('/show/characters').then((res) => {
-
+            setIsLoading(false)
             //recoger datos + filter
             const youngestToOldest = res.data.filter((character) => {
               //condiciones del filter
@@ -30,7 +35,7 @@ export function ChronologyPage () {
 
             //ordenacion de los datos
             youngestToOldest.sort(function (a, b) {
-                ascendingOrder = true;
+                setAscendingOrder(true);
                 return a.age.age - b.age.age;
             });
 
@@ -47,11 +52,11 @@ export function ChronologyPage () {
 
         //si la edad es 16, es decir el pers mas joven por lo que estan de menor a mayor => ORDENAMOS DE MAYOR A MENOR
         if (timeline[0].age.age === 16 ) {
-          ascendingOrder = false; //PONEMOS EL ORDEN A FALSE PORQUE EN LA API PUSIMOS QUE DE MENOR A MAYOR SERIA TRUE
+          setAscendingOrder (false); //PONEMOS EL ORDEN A FALSE PORQUE EN LA API PUSIMOS QUE DE MENOR A MAYOR SERIA TRUE
           timelineCopy.sort(oldestToYoungest);
           setTimeline(timelineCopy);
         } else { //sino, es dicir si el orden es de mayor a menor => ORDENAMOS DE MENOR A MAYOR
-          ascendingOrder = true;
+          setAscendingOrder(true);
           timelineCopy.sort(youngestToOldest);
           setTimeline(timelineCopy);
         }
@@ -76,7 +81,7 @@ export function ChronologyPage () {
               <div key={i}>
                 <p> {item.age && item.age.age} </p>
                 <p>{item.name}</p>
-                <img src="{item.image}"/>
+                <img src={item.image}/>
               </div>
             )}
 
