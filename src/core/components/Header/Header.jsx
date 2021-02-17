@@ -1,18 +1,19 @@
 import React from 'react';
+import spainFlag from '../../../assets/img/spain.svg';
+import ukFlag from '../../../assets/img/uk.svg';
 
 export function Header() {
     return (
-        <div>
+        <nav>
 
-            <div>
-                <img src="../../../assets/img/spain.svg"/>
-                
-            </div>
+            <li>
+                <img src={spainFlag}/>
+            </li>
 
-            <div>
-                <img src="../../../assets/img/uk.svg"/>
-            </div>
+            <li>
+                <img src={ukFlag}/>
+            </li>
 
-        </div>
+        </nav>
     )
 }
