@@ -1,7 +1,8 @@
-import React, {useEffect,useState} from 'react';
+import React, {useContext, useEffect,useState} from 'react';
 import { API } from '../../../../shared/consts/api.consts';
 import {useHistory,useLocation,useParams,useRouteMatch} from "react-router-dom";
 import "./HouseDetailPage.scss"
+import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
 
 
 
@@ -10,9 +11,12 @@ export function HouseDetailPage(){
     const [house,setHouse] = useState(null);
     const {houseName} = useParams();
     const history = useHistory();
+    const {setIsLoading} = useContext(LoadingContext)
 
     const getHouse = () => {
+        setIsLoading(true);
         API.get("show/houses/" + houseName).then((res) => {
+            setIsLoading(false);
             setHouse(res.data[0]);
             console.log(res.data[0])
         })
@@ -20,7 +24,12 @@ export function HouseDetailPage(){
 
     useEffect(getHouse,[]);
 
-
+    let fundationDate ="";
+    if(house !== null){
+        console.log(house);
+        fundationDate = new Date(house.createdAt).toLocaleDateString();
+        console.log(fundationDate);
+    }
 
     return(
         <div style={{width:'100%'}}>
@@ -40,30 +49,62 @@ export function HouseDetailPage(){
                         <img className="c-houses-detail__img"  src={house.logoURL} alt={house.name}/>
                         <figcaption className="c-houses-detail__figcaption" >{house.name}</figcaption>
                     </div>
-                    <div className="d-flex  ">
-                        <div className="col-2">
+                    <div className="d-flex justify-content-between ">
+                        <div >
                             <h3 className="c-houses-detail__th">LEMA</h3>
                             <p className="c-houses-detail__td">{house.words}</p>
                         </div>
-                        <div className="col-2" >
+                        <div  >
                             <h3 className="c-houses-detail__th">SEDE</h3>
-                            <p className="c-houses-detail__td">{house.seat}</p>
+                            
+                            <ul className="c-houses-detail__td">
+                                {house.seat.map((seat) => {
+                                    return (
+                                        <li className="c-houses-detail__li" key={seat}>{seat}</li>
+                                    )
+                                })}
+                            </ul>
+                            
                         </div>
-                        <div className="col-2">
+                        <div >
                             <h3 className="c-houses-detail__th">REGION</h3>
-                            <p className="c-houses-detail__td">{house.region}</p>
+                            
+                            <ul className="c-houses-detail__td">
+                                {house.region.map((region)=>{
+                                return(
+                                    <li className="c-houses-detail__li" key={region}>{region}</li>
+                                )
+                                })}
+                            </ul>
+                            
                         </div>
-                        <div className="col-2">
+                        <div >
                             <h3 className="c-houses-detail__th">ALIANZAS</h3>
-                            <p className="c-houses-detail__td">{house.allegiance}</p>
+                            
+                            <ul className="c-houses-detail__td">
+                                {house.allegiance.map((aliado) => {
+                                    return (
+                                        <li className="c-houses-detail__li" key={aliado}>{aliado}</li>
+                                    )
+                                })}
+                            </ul>
+                            
                         </div>
-                        <div className="col-2">
+                        <div >
                             <h3 className="c-houses-detail__th">RELIGIONES</h3>
-                            <p className="c-houses-detail__td">{house.religion}</p>
+                           
+                            <ul className="c-houses-detail__td">
+                            {house.religion.map((religion) => {
+                                return(
+                                    <li className="c-houses-detail__li" key={religion}>{religion}</li>
+                                )
+                            })}
+                            </ul>
+                            
                         </div>
-                        <div className="col-2">
+                        <div >
                             <h3 className="c-houses-detail__th">FUNDACION</h3>
-                            <p className="c-houses-detail__td">{house.createdAt}</p>
+                            <p className="c-houses-detail__td">{fundationDate}</p>
                         </div>
                     </div>
                     {/* <table className="table table-dark table-striped">

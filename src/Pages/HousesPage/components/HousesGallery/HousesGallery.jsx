@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { HousesForm } from "../HousesForm/HousesForm";
-import SimpleBar from 'simplebar-react';
+
 
 
 import "./HouseGallery.scss"
