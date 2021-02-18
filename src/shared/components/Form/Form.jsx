@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Form.scss";
 
-export function HousesForm(props){
+export function Form(props){
 
     const submitForm = ($event) => {
         $event.preventDefault();

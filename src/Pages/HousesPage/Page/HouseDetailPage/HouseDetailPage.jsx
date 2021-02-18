@@ -1,12 +1,21 @@
 import React, {useContext, useEffect,useState} from 'react';
 import { API } from '../../../../shared/consts/api.consts';
-import {useHistory,useLocation,useParams,useRouteMatch} from "react-router-dom";
+import {useHistory,useParams} from "react-router-dom";
+import { Flags } from "../../../../core/components/Flags/Flags";
 import "./HouseDetailPage.scss"
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
+// import { useTranslation } from 'react-i18next';
+import "../../../../i18n"
 
 
 
 export function HouseDetailPage(){
+
+    // const {t, i18n } = useTranslation(['translation']);
+
+    // const changeLanguage = code => {
+    //     i18n.changeLanguage(code);
+    // }
 
     const [house,setHouse] = useState(null);
     const {houseName} = useParams();
@@ -39,8 +48,13 @@ export function HouseDetailPage(){
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
                 </div>
                 
-
-                <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
+                {/* <button onClick={()=> changeLanguage('es')}>ES</button>
+                <button onClick={()=> changeLanguage('en')}>EN</button> */}
+                
+                <div className="d-flex justify-content-between   ">
+                    <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
+                    <Flags/>
+                </div>
             </div>
 
             <div>
