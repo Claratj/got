@@ -1,0 +1,37 @@
+main {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .marco {
+    height: 100%;
+    width: 100%;
+
+    .empty {
+      height: 45%;
+      width: 45%;
+    }
+
+    .container {
+      height: 45%;
+      width: 45%;
+      margin: 0%;
+      padding: 0%;
+
+      .container-img {
+        height: 7rem;
+        width: 7rem;
+
+        .container-img_img {
+          object-fit: cover;
+          object-position: top;
+          border-radius: 50%;
+          height: 7rem;
+          width: 7rem;
+          float: inline-start;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { API } from '../../shared/consts/api.consts';
+import './ChronologyPage.scss';
 
 
 export function ChronologyPage () {
@@ -69,19 +70,29 @@ export function ChronologyPage () {
 
  
       return (
-        <div>
+        <main>
 
           <a onClick={reverseTimelineOrder}>
             {ascendingOrder ? <span className="icon-circle-up"></span> 
-            : <span className="icon-circle-down"></span>}</a>
-            {timeline.map((item, i) =>
-              <div key={i}>
-                <p> {item.age && item.age.age} </p>
-                <p>{item.name}</p>
-                <img src={item.image}/>
+            : <span className="icon-circle-down"></span>}
+            </a>
+          {timeline.map((item, i) =>
+            <div className="marco">
+              
+              <div className="container" key={i}>
+                <p className= "container-age"> {item.age && item.age.age} </p>
+                <p className="container-name">{item.name}</p>
+                <div className="container-img">
+                  <img className="container-img_img" src={item.image} alt={item.name}/>
+                </div>
+                <div className="empty">
+                
+              </div>
+                </div>
+                
               </div>
             )}
 
-        </div>
+        </main>
         )
 }
