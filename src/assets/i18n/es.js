@@ -1,3 +1,8 @@
 export const es = {
-    'lema': 'LEMA'
+    'words': 'LEMA',
+    'seat':'SEDE',
+    'region':'REGION',
+    'allegiance':'ALIANZAS',
+    'religion':'RELIGIONES',
+    'fundation':'FUNDACION'
 }
