@@ -13,20 +13,18 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
+      <div style={{width:"90%",margin:"auto"}}>
 
           <Header/>
-          <Menu/>
+          
 
           <LoadingContext.Provider value={{isLoading, setIsLoading}}>
           <Loading/>
-
+          
           <Routes />
-
+          <Menu/>
           </LoadingContext.Provider>
 
-        </header>
       </div>
     </Router>
   );

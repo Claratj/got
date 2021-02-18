@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../shared/consts/api.consts';
 import { LoadingContext } from '../../core/components/Loading/contexts/LoadingContext';
+import './Chronology.scss';
 
 
 export function ChronologyPage () {
@@ -74,17 +75,22 @@ export function ChronologyPage () {
 
  
       return (
-        <div>
+      <div className="c-chronology">
+
+        <div className="scroll" style={{width: '80%', margin: 'auto'}}>
 
           <button onClick={reverseTimelineOrder}>{ascendingOrder ? 'Flecha arriba' : 'Flecha abajo'}</button>
+
             {timeline.map((item, i) =>
-              <div key={i}>
+              <figure className="c-chronology-character" key={i}>
                 <p> {item.age && item.age.age} </p>
                 <p>{item.name}</p>
                 <img src={item.image}/>
-              </div>
+              </figure>
             )}
 
-        </div>
+          </div>
+
+      </div>
         )
 }

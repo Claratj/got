@@ -8,10 +8,10 @@ export function Loading () {
 
     return (
 
-        // Si isLoading es true muestrame el html
-
-        isLoading && <div className="c-loading">
-            <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        isLoading && <div className='c-loading'>
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
-    )
+        
+    );
+    
 }

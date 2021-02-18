@@ -1,0 +1,27 @@
+.b-icon{
+
+    color:white;
+
+    &--house{
+        font-size: 40px;
+        margin-top: 25px;
+        
+    }
+
+    &--arrow{
+        font-size: 20px;
+        margin-top: 1.8rem;
+        
+        &--font{
+            font-family: var(--font-family-houses);
+            font-size: 24px;
+            margin-left: 1rem;
+        }
+
+    }
+
+    &--search1{
+        margin-top: 32px;
+        font-size: 18px;
+    }
+}
