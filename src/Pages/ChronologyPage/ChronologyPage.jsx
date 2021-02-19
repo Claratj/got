@@ -69,23 +69,25 @@ export function ChronologyPage () {
     useEffect(getChronology, []);
 //<p style={ i % 2 ? {"color": "white"} : {"color": "red"}} >HOLAAAAAAAA</p>
  
-      return (
-        <main>
-
-          <a onClick={reverseTimelineOrder}>
+  return (
+        
+    <main>
+      
+      <a onClick={reverseTimelineOrder}>
             {ascendingOrder ? <span className="icon-circle-up"></span> 
             : <span className="icon-circle-down"></span>}
             </a>
+      
+          
           {timeline.map((item, i) =>
     
-              <div className="chronology-card" key={i} style={i = 1 ? { "margin-top": "600px" } : { "margin-top": "0px" }}>
-                <img className="chronology-card__img__img" src={item.image} alt={item.name} />
+            <div className="chronology-card" key={i} style={i % 2 ?
+              { "margin-top": "400px", "border-left": "2px solid white" } :
+              { "margin-top": "0px", "border-right": "2px solid white" }}>
                 <p className= "chronology-card__age"> {item.age && item.age.age} </p>
                 <p className="chronology-card__name">{item.name}</p>
-                
-                </div>
-                
-             
+              <img className="chronology-card__img__img" src={item.image} alt={item.name} />
+            </div>
             )}
 
         </main>
