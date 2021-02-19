@@ -6,9 +6,8 @@ li {
     height: 231px;
     width: 100%;
     overflow-y: scroll;
-
-
-    }
+    scroll-behavior: smooth;
+}
 
 .c-houses-detail{
     &__img{

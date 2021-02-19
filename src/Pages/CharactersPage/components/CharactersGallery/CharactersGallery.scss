@@ -1,9 +1,10 @@
 .gallery{
     height: calc(100vh - 200px);
-    margin-top: 40px;
-    overflow-x: hidden;
+    // margin-top: 40px;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
@@ -12,7 +13,8 @@
     position: relative;
     animation: fadeIn;
     animation-duration: 1s;
-    margin-bottom: 15px;
+    margin: 0;
+    // margin-bottom: 15px;
     padding: 5px;
 
     &__img {

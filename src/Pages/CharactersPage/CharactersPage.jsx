@@ -17,7 +17,8 @@ export function CharactersPage() {
     useEffect(getCharacters, []);
 
     return (
-        <div class="gallery-container">
+        <div className="">
+        
             <CharactersGallery characters={characters} />
         </div>
     );

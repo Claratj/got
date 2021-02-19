@@ -7,8 +7,7 @@ import './CharactersGallery.scss';
 export function CharactersGallery(props) {
 
     return (
-
-        <div className="row gallery">
+        <div className="gallery">
             {props.characters.map((character, i) =>
                 <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                     <Link to={"/characters/" + character.name}>
