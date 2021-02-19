@@ -67,7 +67,7 @@ export function ChronologyPage () {
     }
 
     useEffect(getChronology, []);
-
+//<p style={ i % 2 ? {"color": "white"} : {"color": "red"}} >HOLAAAAAAAA</p>
  
       return (
         <main>
@@ -77,20 +77,15 @@ export function ChronologyPage () {
             : <span className="icon-circle-down"></span>}
             </a>
           {timeline.map((item, i) =>
-            <div className="marco">
-              
-              <div className="container" key={i}>
-                <p className= "container-age"> {item.age && item.age.age} </p>
-                <p className="container-name">{item.name}</p>
-                <div className="container-img">
-                  <img className="container-img_img" src={item.image} alt={item.name}/>
-                </div>
-                <div className="empty">
+    
+              <div className="chronology-card" key={i} style={i = 1 ? { "margin-top": "600px" } : { "margin-top": "0px" }}>
+                <img className="chronology-card__img__img" src={item.image} alt={item.name} />
+                <p className= "chronology-card__age"> {item.age && item.age.age} </p>
+                <p className="chronology-card__name">{item.name}</p>
                 
-              </div>
                 </div>
                 
-              </div>
+             
             )}
 
         </main>

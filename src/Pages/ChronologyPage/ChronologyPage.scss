@@ -1,37 +1,25 @@
 main {
   height: 100%;
-  width: 100%;
-  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  .marco {
-    height: 100%;
-    width: 100%;
+  .chronology-card {
+    height: 45%;
+    width: 40%;
+    margin: 0 auto;
+    padding: 3%;
+    border-top: 2px solid whitesmoke;
 
-    .empty {
-      height: 45%;
-      width: 45%;
-    }
-
-    .container {
-      height: 45%;
-      width: 45%;
-      margin: 0%;
-      padding: 0%;
-
-      .container-img {
-        height: 7rem;
-        width: 7rem;
-
-        .container-img_img {
-          object-fit: cover;
-          object-position: top;
-          border-radius: 50%;
-          height: 7rem;
-          width: 7rem;
-          float: inline-start;
-        }
-      }
+    .chronology-card__img__img {
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      height: 7rem;
+      width: 7rem;
     }
   }
 }
