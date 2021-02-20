@@ -1,8 +1,9 @@
 .c-header {
+    height: 10vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    height: 13vh;
 }
 
 .c-header-icons__home {

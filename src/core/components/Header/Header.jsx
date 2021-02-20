@@ -24,9 +24,9 @@ export function Header(props) {
         <div className="c-header col-11">
 
             {props.search &&
-                <div>
-                    <Form />
-                </div>
+
+                <Form />
+
             }
 
             <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">
