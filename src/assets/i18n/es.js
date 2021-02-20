@@ -2,7 +2,13 @@ export const es = {
     'words': 'LEMA',
     'seat':'SEDE',
     'region':'REGION',
-    'allegiance':'ALIANZAS',
+    'allegiances':'ALIANZAS',
     'religion':'RELIGIONES',
-    'fundation':'FUNDACION'
+    'fundation':'FUNDACION',
+    'siblings': 'DESCENDIENTES',
+    'titles': 'TÍTULOS',
+    'appearances': 'APARICIONES',
+    'father': 'PADRE',
+    'house': 'CASA',
+
 }

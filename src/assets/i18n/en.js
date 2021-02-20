@@ -2,8 +2,13 @@ export const en = {
     'words': 'WORDS',
     'seat':'SEAT',
     'region':'REGION',
-    'allegiance':'ALLEGIANCE',
+    'allegiances':'ALLEGIANCES',
     'religion':'RELIGION',
-    'fundation':'FUNDATION'
+    'fundation':'FUNDATION',
+    'siblings': 'SIBLINGS',
+    'titles': 'TITLES',
+    'appearances': 'APPEARANCES',
+    'father': 'FATHER',
+    'house': 'HOUSE',
 }
 
