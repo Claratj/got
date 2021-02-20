@@ -23,10 +23,15 @@ export function Header(props) {
 
         <div className="c-header col-11">
 
-            {props.search &&
+            {props.arrow &&
+                <div className="" onClick={() => history.push(props.arrow)}>
+                    <span className="icon-Vector b-icon b-icon--arrow" ></span>
+                    <p className=" b-icon b-icon--arrow--font">Volver</p>
+                </div>
+            }
 
+            {props.search, props.fnClickedSearch &&
                 <Form />
-
             }
 
             <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">

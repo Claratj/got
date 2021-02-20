@@ -77,7 +77,7 @@ export function CharactersDetail() {
 
     return (
         <div className=" ">
-            <Header house={true} />
+            <Header house={true} arrow={'/characters'} />
             <div className="char-detail">
                 {character && <div className="d-flex align-items-center flex-column" >
                     <figure className="c-houses-detail__figure">

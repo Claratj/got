@@ -1,9 +1,10 @@
 .c-header {
     height: 10vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    position: relative;
 }
 
 .c-header-icons__home {

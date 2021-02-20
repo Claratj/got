@@ -10,6 +10,7 @@ import { Footer } from '../../core/components/Footer/Footer';
 export function CharactersPage() {
 
     const [characters, setCharacters] = useState([]);
+    const [filterCharacters, setFilterCharacters] = useState([]);
     const { setIsLoading } = useContext(LoadingContext);
 
 
@@ -21,11 +22,30 @@ export function CharactersPage() {
         });
     };
 
+    const searchCharacter = (characterName) => {
+
+        const findCharacter = characters.filter(character => {
+
+            return character.name.toLowerCase().includes(characterName.toLocaleLowerCase());
+        })
+        setFilterCharacters(findCharacter);
+    }
+
+    const initialFilterCharacters = () => {
+
+        setFilterCharacters(characters);
+    }
+
+    useEffect(initialFilterCharacters, [characters]);
+
+
+
+
     useEffect(getCharacters, []);
 
     return (
         <div className="gallery-container">
-            <Header search={true} house={true} />
+            <Header search={true} house={true} fnClickedSearch={searchCharacter} />
             <CharactersGallery characters={characters} />
             <Footer />
         </div>
