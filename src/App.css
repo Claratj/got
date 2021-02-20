@@ -1,6 +1,7 @@
 body{
   font-family: var(--font-family-base);
   color: white;
+  overflow: hidden;
 }
 
 .App {
