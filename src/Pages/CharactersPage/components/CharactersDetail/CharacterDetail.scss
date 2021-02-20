@@ -2,6 +2,12 @@ li {
     padding: 0.6rem 0;
 }
 
+.char-detail{
+    width: 88%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
 .box{
     height: 231px;
     width: 100%;
@@ -18,8 +24,16 @@ li {
         margin: 66px 160px 30px;
     }
 
+    &__col{
+        width: 12vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__figure{
-        margin:0;
+        margin: 0;
+
     }
 
     &__figcaption{
