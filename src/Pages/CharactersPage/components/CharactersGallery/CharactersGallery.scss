@@ -1,7 +1,9 @@
 .gallery{
-    height: calc(100vh - 200px);
-    // margin-top: 40px;
+    height:74vh;
+    width: 90%;
+    margin-top: 40px;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +17,7 @@
     animation-duration: 1s;
     margin: 0;
     // margin-bottom: 15px;
-    padding: 5px;
+    padding: 1rem 0.125rem ;
 
     &__img {
         height: 320px;

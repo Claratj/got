@@ -4,6 +4,7 @@ import { API } from "../../shared/consts/api.consts";
 import { CharactersGallery } from "./components/CharactersGallery/CharactersGallery";
 import "./CharactersPage.scss";
 import { Header } from '../../core/components/Header/Header';
+import { Footer } from '../../core/components/Footer/Footer';
 
 
 export function CharactersPage() {
@@ -23,9 +24,10 @@ export function CharactersPage() {
     useEffect(getCharacters, []);
 
     return (
-        <div className="">
+        <div className="gallery-container">
             <Header search={true} house={true} />
             <CharactersGallery characters={characters} />
+            <Footer />
         </div>
     );
 }

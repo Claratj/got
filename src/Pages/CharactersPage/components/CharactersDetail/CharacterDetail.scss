@@ -11,7 +11,8 @@ li {
 
 .c-houses-detail{
     &__img{
-        // object-fit: contain;
+        object-fit: cover;
+        object-position: top;
         width: 248px;
         height: 320px;
         margin: 66px 160px 30px;
