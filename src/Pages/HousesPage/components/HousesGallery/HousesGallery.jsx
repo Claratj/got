@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Flags } from "../../../../core/components/Flags/Flags";
 import { Form } from "../../../../shared/components/Form/Form";
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -12,6 +13,12 @@ export function HousesGallery(props){
 
     const [filterHouses,setFilterHouses] =  useState([]);
     const history=useHistory();
+    const [t, i18n ] = useTranslation(['translation']);
+
+    const changeLanguage = code => {
+        i18n.changeLanguage(code);
+        console.log(code);
+    }
 
     const searchHouse = (houseName) =>{
 
@@ -37,7 +44,7 @@ export function HousesGallery(props){
                 <Form fnClickedSearch={searchHouse}/>
                 <div className="d-flex justify-content-between mr-5  ">
                     <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
-                    <Flags/>
+                    <Flags fnLanguage={changeLanguage}/>
                 </div>
                 
             </div>
