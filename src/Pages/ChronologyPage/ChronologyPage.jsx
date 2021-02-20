@@ -75,21 +75,23 @@ export function ChronologyPage () {
 
  
       return (
-      <div className="c-chronology">
+      <div className="c-chronology scroll">
 
-        <div className="scroll" style={{width: '80%', margin: 'auto'}}>
+        <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" : 
+        "icon-circle-down b-icon b-icon--circle"}>
+        </span>
 
-          <button onClick={reverseTimelineOrder}>{ascendingOrder ? 'Flecha arriba' : 'Flecha abajo'}</button>
+          {timeline.map((item, i) =>
+              
+              <div className="c-chronology-card" key={i} 
+              style={i == 1 ? {"margin-top": "400px", "border-left": "2px solid white"} :
+              {"margin-top": "0px", "border-right": "2px solid white"}}>
 
-            {timeline.map((item, i) =>
-              <figure className="c-chronology-character" key={i}>
-                <p> {item.age && item.age.age} </p>
-                <p>{item.name}</p>
-                <img src={item.image}/>
-              </figure>
+                <p className= "c-chronology-card__age"> {item.age && item.age.age} </p>
+                <p className="c-chronology-card__name">{item.name}</p>
+                <img className="c-chronology-card__img" src={item.image} alt={item.name}/>
+              </div>
             )}
-
-          </div>
 
       </div>
         )

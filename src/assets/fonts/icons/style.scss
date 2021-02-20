@@ -3,9 +3,9 @@
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?m72eay') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?m72eay') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?m72eay##{$icomoon-font-family}') format('svg');
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sp2wew') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sp2wew') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sp2wew##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -43,7 +43,6 @@
     color: #fff;
   }
 }
-
 .icon-circle-up {
   &:before {
     content: $icon-circle-up; 
@@ -54,5 +53,4 @@
     content: $icon-circle-down; 
   }
 }
-
 
