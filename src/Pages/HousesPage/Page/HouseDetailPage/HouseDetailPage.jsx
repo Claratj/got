@@ -40,9 +40,9 @@ export function HouseDetailPage(){
         fundationDate = new Date(house.createdAt).toLocaleDateString();
         console.log(fundationDate);
     }
-
+    
     return(
-        <div style={{width:'100%'}}>
+        <div style={{width:"90%",margin:"auto"}}>
             <div className="d-flex justify-content-between">
                 <div className="d-flex " onClick={() => history.push('/houses')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>

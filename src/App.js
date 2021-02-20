@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
     
-      <div style={{width:"90%",margin:"auto"}}>
+      <div>
         <LoadingContext.Provider value={{isLoading,setIsLoading}}>
           <Loading/>
           <Routes />
