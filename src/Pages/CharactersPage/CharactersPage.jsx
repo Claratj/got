@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { API } from "../../shared/consts/api.consts";
 import { CharactersGallery } from "./components/CharactersGallery/CharactersGallery";
-
+import "./CharactersPage.scss";
 
 
 export function CharactersPage() {
@@ -17,7 +17,8 @@ export function CharactersPage() {
     useEffect(getCharacters, []);
 
     return (
-        <div class="">
+        <div className="">
+        
             <CharactersGallery characters={characters} />
         </div>
     );

@@ -1,5 +1,50 @@
-.img--Character--Detail {
-    height: 320px;
-    width: 248px;
-    object-fit: contain;
+li {
+    padding: 0.6rem 0;
+}
+
+.box{
+    height: 231px;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.c-houses-detail{
+    &__img{
+        // object-fit: contain;
+        width: 248px;
+        height: 320px;
+        margin: 66px 160px 30px;
+    }
+
+    &__figure{
+        margin:0;
+    }
+
+    &__figcaption{
+        font-size: 36px;
+        margin-bottom: 2rem;
+        color: white;
+        text-align: center;
+    }
+
+    &__hs{
+        width: 160px;
+        height: 191.6px;
+    }
+
+    &__th{
+        font-size: 24px;
+        color: white;
+        text-align: center;
+    }
+    &__td{
+        padding: 0;
+        font-family: var(--font-family-houses);
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        list-style: none;
+    }
+  
 }

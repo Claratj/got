@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from '../../../../shared/consts/api.consts';
 import './CharacterDetail.scss';
-
+// import '../../../../index.scss'
 
 export function CharactersDetail() {
 
@@ -35,28 +35,28 @@ export function CharactersDetail() {
 
     if (allegiances != undefined) {
 
-        listAllegiances = allegiances.map((allegiance) =>
-            <li>{allegiance}</li>
+        listAllegiances = allegiances.map((allegiance, i) =>
+            <li key={i}>{allegiance}</li>
         );
     }
 
     if (appearances != undefined) {
-        listAppearances = appearances.map((appearance) =>
-            <li>{appearance}</li>
+        listAppearances = appearances.map((appearance, i) =>
+            <li key={i}>{appearance}</li>
         );
     }
 
 
     if (siblings != undefined) {
-        listSiblings = siblings.map((sibling) =>
-            <li>{sibling}</li>
+        listSiblings = siblings.map((sibling, i) =>
+            <li key={i}>{sibling}</li>
         );
     }
 
 
     if (titles != undefined) {
-        listTitles = titles.map((title) =>
-            <li>{title}</li>
+        listTitles = titles.map((title, i) =>
+            <li key={i}>{title}</li>
         );
     }
 
@@ -64,41 +64,43 @@ export function CharactersDetail() {
 
     return (
         <div>
-            {character && <div>
-                <figure>
-                    <img className="img--Character--Detail" src={character.image} alt="" />
-                    <figcaption>{character.name}</figcaption>
+            {character && <div className="d-flex align-items-center flex-column" >
+                <figure className="c-houses-detail__figure">
+                    <img className="c-houses-detail__img" src={character.image} alt="" />
+                    <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
                 </figure>
                 <div className="row">
-                    <div>
-                        <h2>CASA</h2>
-                        {house !== null &&<img src={house.logoURL} /> }
+                    <div className="col-2">
+                        <h3 className="c-houses-detail__th">CASA</h3>
+                        {house !== null && <figure className="c-houses-detail__figure">
+                            <img className="c-houses-detail__hs" src={house.logoURL} />
+                        </figure>}
                     </div>
-                    <div>
-                        <h2>ALIANZAS</h2>
-                        <ul>
+                    <div className="col-2">
+                        <h3 className="c-houses-detail__th">ALIANZAS</h3>
+                        <ul className="box c-houses-detail__td">
                             {listAllegiances}
                         </ul>
                     </div>
-                    <div>
-                        <h2>APARICIONES</h2>
-                        <ul>
+                    <div className="col-2 c-houses-detail__scroll">
+                        <h3 className="c-houses-detail__th">APARICIONES</h3>
+                        <ul className="box c-houses-detail__td">
                             {listAppearances}
                         </ul>
                     </div>
-                    <div>
-                        <h2>PADRE</h2>
-                        <p>{character.father}</p>
+                    <div className="col-2">
+                        <h3 className="c-houses-detail__th">PADRE</h3>
+                        <p className="c-houses-detail__td">{character.father}</p>
                     </div>
-                    <div>
-                        <h2>DESCENDIENTES</h2>
-                        <ul>
+                    <div className="col-2">
+                        <h3 className="c-houses-detail__th">DESCENDIENTES</h3>
+                        <ul className="box c-houses-detail__td">
                             {listSiblings}
                         </ul>
                     </div>
-                    <div>
-                        <h2>TITULOS</h2>
-                        <ul>
+                    <div className="col-2">
+                        <h3 className="c-houses-detail__th">TITULOS</h3>
+                        <ul className="box c-houses-detail__td">
                             {listTitles}
                         </ul>
                     </div>
