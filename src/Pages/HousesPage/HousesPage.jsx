@@ -24,7 +24,7 @@ export function HousesPage() {
   useEffect(getHouses, []);
 
   return (
-    <div>
+    <div style={{width:"90%",margin:"auto"}}>
       <HousesGallery houses={houses}  />
     </div>
   );
