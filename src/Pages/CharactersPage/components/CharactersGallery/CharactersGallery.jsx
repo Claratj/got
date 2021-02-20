@@ -13,7 +13,7 @@ export function CharactersGallery(props) {
                     <Link to={"/characters/" + character.name}>
                         <figure key={i} className="character-gallery" >
                             <img className="character-gallery__img" src={character.image} alt={character.name} />
-                            <figcaption className="character-gallery__figcaption">{character.name}</figcaption>
+                            <div className="character-gallery__figcaption"><p>{character.name}</p></div>
                         </figure>
                     </Link>
                 </div>
