@@ -1,40 +1,44 @@
-.c-chronology {
-  height:65vh;
-  width: 90%;
-  margin: 50px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+// .c-chronology {
+  // height:74vh;
+  // width: 90%;
+  // margin: 0 auto;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
+  // scroll-behavior: smooth;
 
 
-  .c-chronology-button {
-      position: absolute;
-      top: 250px;
-      margin: auto;
-      background: none;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 2px solid whitesmoke;
-  }
+.chronology {
 
-  .c-chronology-card {
-  //   height: 30rem;
-    width: 40%;
-    border-top: 2px solid whitesmoke;
-  //   display:block;
-    text-align: center;
-    
-    .c-chronology-card__img {
+  // &__button {
+  //       position: absolute;
+  //       top: 250px;
+  //       margin: auto;
+  //       background: none;
+  //       width: 50px;
+  //       height: 50px;
+  //       border-radius: 50%;
+  //       border: 2px solid whitesmoke;
+  //   }
+    &__card {
+    //   height: 30rem;
+      width: 40%;
+      border-top: 2px solid whitesmoke;
+    //   display:block;
+      text-align: center;
+    }
+    &__card__img {
       object-fit: cover;
       object-position: top;
       border-radius: 50%;
       height: 7rem;
       width: 7rem;
     }
-  }
+  
 }
+
+
+
