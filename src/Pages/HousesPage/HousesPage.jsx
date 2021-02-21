@@ -25,9 +25,9 @@ export function HousesPage() {
   useEffect(getHouses, []);
 
   return (
-    <div style={{width:"90%",margin:"auto"}}>
-      <HousesGallery houses={houses}  />
-      <Footer/>
+    <div className="gallery-container">
+      <HousesGallery houses={houses} />
+      <Footer />
     </div>
   );
 }

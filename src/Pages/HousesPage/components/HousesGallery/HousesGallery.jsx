@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Flags } from "../../../../core/components/Flags/Flags";
-import { Form } from "../../../../shared/components/Form/Form";
 import { useTranslation } from 'react-i18next';
 
 
@@ -52,7 +50,6 @@ export function HousesGallery(props) {
             <Header search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
 
             <div className="gallery" >
-                {/* <SimpleBar style={{ maxHeight: 300}}>  */}
                 {filterHouses
                     .filter(house => house.logoURL)
                     .map((house, i) =>
