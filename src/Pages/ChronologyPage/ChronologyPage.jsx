@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../shared/consts/api.consts';
 import { LoadingContext } from '../../core/components/Loading/contexts/LoadingContext';
+import { Header } from '../../core/components/Header/Header';
+import { Footer } from '../../core/components/Footer/Footer';
 import './Chronology.scss';
 
 
-export function ChronologyPage () {
+export function ChronologyPage (props) {
 
     const {setIsLoading} = useContext(LoadingContext);
 
@@ -75,24 +77,32 @@ export function ChronologyPage () {
 
  
       return (
+    <div>
+
+    <Header house={true}></Header>  
+
       <div className="c-chronology scroll">
 
         <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" : 
         "icon-circle-down b-icon b-icon--circle"}>
         </span>
 
-          {timeline.map((item, i) =>
-              
-              <div className="c-chronology-card" key={i} 
-              style={i == 1 ? {"margin-top": "400px", "border-left": "2px solid white"} :
+          {timeline.map((item, i) => 
+             
+              <div className="c-chronology-card" key={i} style={i % 2 ? {"margin-top": "400px", "border-left": "2px solid white"} :
               {"margin-top": "0px", "border-right": "2px solid white"}}>
-
                 <p className= "c-chronology-card__age"> {item.age && item.age.age} </p>
                 <p className="c-chronology-card__name">{item.name}</p>
                 <img className="c-chronology-card__img" src={item.image} alt={item.name}/>
               </div>
+              
             )}
 
       </div>
+ 
+        <Footer></Footer>
+
+    </div>
         )
 }
+

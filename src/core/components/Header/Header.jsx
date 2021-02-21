@@ -1,37 +1,55 @@
 import React from 'react';
-import spainFlag from '../../../assets/img/spain.svg';
-import ukFlag from '../../../assets/img/uk.svg';
 import './Header.scss';
 import { useHistory } from 'react-router-dom';
+// import { Form } from '../../../shared/components/Form/Form';
+import SpainFlag from '../../../assets/img/spain.svg';
+import ukFlag from '../../../assets/img/uk.svg';
 
 
 
 
-export function Header() {
+export function Header(props) {
 
-    const history=useHistory();
+    const history = useHistory();
+
+    function englishTranslate() {
+        props.fnLanguage('en');
+    }
+    function spanishTranslate() {
+        props.fnLanguage('es');
+    }
 
     return (
 
-    <div className="c-header col-11"> 
+        <div className="c-header col-11">
 
-        <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">
+            {props.arrow &&
+                <div className="" onClick={() => history.push(props.arrow)}>
+                    <span className="icon-Vector b-icon b-icon--arrow" ></span>
+                    <p className=" b-icon b-icon--arrow--font">Volver</p>
+                </div>
+            }
 
-            <div className="c-header-icons__home">
-                <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')}> </span>
-            </div>
+            {/* {props.search, props.fnClickedSearch &&
+                <Form />
+            } */}
 
-            <div className="c-header-icons__flag">
-                <img src={spainFlag}/>
-            </div>
+            <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">
 
-            <div className="c-header-icons__flag">
-                <img src={ukFlag}/>
+                {props.house &&
+                    <div className="c-header-icons__home">
+                        <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')}> </span>
+                    </div>
+                }
+
+                <div className="d-flex justify-content-between" >
+                    <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
+                    <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
+                </div>
+
             </div>
 
         </div>
-
-    </div>
 
     )
 }

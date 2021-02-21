@@ -1,8 +1,10 @@
 .c-header {
+    height: 10vh;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     flex-direction: row;
-    height: 15vh;
+    position: relative;
 }
 
 .c-header-icons__home {
@@ -11,4 +13,10 @@
 
 .c-header-icons__flag {
     padding: 0.5rem;
+}
+
+.flags{
+    width: 54px;
+    margin-top: 21px 8px;
+    padding: 5px;
 }
