@@ -7,12 +7,14 @@ import './Footer.scss';
 
 
 export function Footer() {
+
+
     return (
 
         <div className="footer">
-            <Link to={"/characters/"}><a>PERSONAJES</a></Link>
-            <Link to={"/houses/"}><a>CASAS</a></Link>
-            <Link to={"/chronology/"}><a>CRONOLOGÍA</a></Link>
+            <Link to={"/characters"}>PERSONAJES</Link>
+            <Link to={"/houses"}>CASAS</Link>
+            <Link to={"/chronology"}>CRONOLOGÍA</Link>
         </div>
 
     )

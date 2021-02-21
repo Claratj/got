@@ -49,9 +49,9 @@ export function HousesGallery(props) {
                 </div>
                 
             </div> */}
-            <Header search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
-
-            <div className="d-flex flex-wrap  c-houses-gallery__scroll" >
+            <Header  search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
+                 
+            <div   className="d-flex flex-wrap  c-houses-gallery__scroll" >
                 {/* <SimpleBar style={{ maxHeight: 300}}>  */}
 
                 {filterHouses

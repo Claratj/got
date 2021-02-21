@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../../../shared/consts/api.consts';
-import { useHistory, useParams } from "react-router-dom";
+import {useHistory,useParams} from "react-router-dom";
 // import { Flags } from "../../../../core/components/Flags/Flags";
 import "./HouseDetailPage.scss"
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
@@ -19,10 +19,10 @@ export function HouseDetailPage() {
         console.log(code);
     }
 
-    const [house, setHouse] = useState(null);
-    const { houseName } = useParams();
-    const history = useHistory();
-    const { setIsLoading } = useContext(LoadingContext)
+    const [house,setHouse] = useState(null);
+    const {houseName} = useParams();
+     const history = useHistory();
+    const {setIsLoading} = useContext(LoadingContext)
 
     const getHouse = () => {
         setIsLoading(true);
@@ -41,11 +41,11 @@ export function HouseDetailPage() {
         fundationDate = new Date(house.createdAt).toLocaleDateString();
         console.log(fundationDate);
     }
+    
+    return(
+        <div style={{width:"90%",margin:"auto"}}>
 
-    return (
-        <div style={{ width: "90%", margin: "auto" }}>
-
-            <Header arrow={true} house={true} houseDetail={true} fnLanguage={changeLanguage} />
+            <Header  arrow={true} house={true} houseDetail={true}  fnLanguage={changeLanguage} />
             {/* <div className="d-flex justify-content-between">
                 <div className="d-flex " onClick={() => history.push('/houses')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
