@@ -10,11 +10,11 @@ export function HomePage() {
             <div className="gallery-container">
                 <Header></Header>
                 <div className="c-home__title-container">
-                    <h1 className="c-home__title">GAME OF THRONES</h1>
+                    <h1 className="c-home__title">GAME OF <br />THRONES</h1>
                 </div>
                 <Footer></Footer>
             </div>
-        </div>
+        </div >
     );
 }
 
