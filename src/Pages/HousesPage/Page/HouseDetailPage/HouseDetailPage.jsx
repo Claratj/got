@@ -1,10 +1,11 @@
 import React, {useContext, useEffect,useState} from 'react';
 import { API } from '../../../../shared/consts/api.consts';
 import {useHistory,useParams} from "react-router-dom";
-import { Flags } from "../../../../core/components/Flags/Flags";
+// import { Flags } from "../../../../core/components/Flags/Flags";
 import "./HouseDetailPage.scss"
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
 import { useTranslation } from 'react-i18next';
+import { Header } from '../../../../core/components/Header/Header';
 
 
 
@@ -20,7 +21,7 @@ export function HouseDetailPage(){
 
     const [house,setHouse] = useState(null);
     const {houseName} = useParams();
-    const history = useHistory();
+     const history = useHistory();
     const {setIsLoading} = useContext(LoadingContext)
 
     const getHouse = () => {
@@ -43,7 +44,9 @@ export function HouseDetailPage(){
     
     return(
         <div style={{width:"90%",margin:"auto"}}>
-            <div className="d-flex justify-content-between">
+
+            <Header  arrow={true} house={true} houseDetail={true}  fnLanguage={changeLanguage} />
+            {/* <div className="d-flex justify-content-between">
                 <div className="d-flex " onClick={() => history.push('/houses')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
@@ -55,7 +58,7 @@ export function HouseDetailPage(){
                     <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
                     <Flags fnLanguage={changeLanguage} />
                 </div>
-            </div>
+            </div> */}
 
             <div>
                 {house && <figure className="c-houses-detail__figure">

@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 
 import "./HouseGallery.scss"
+import { Header } from "../../../../core/components/Header/Header";
 
 
 export function HousesGallery(props){
@@ -40,14 +41,15 @@ export function HousesGallery(props){
     return(
         
         <div >
-            <div className="d-flex justify-content-between search-container">
+            {/* <div className="d-flex justify-content-between search-container">
                 <Form fnClickedSearch={searchHouse}/>
                 <div className="d-flex justify-content-between mr-5  ">
                     <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
                     <Flags fnLanguage={changeLanguage}/>
                 </div>
                 
-            </div>
+            </div> */}
+            <Header  search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
                  
             <div   className="d-flex flex-wrap  c-houses-gallery__scroll" >
                 {/* <SimpleBar style={{ maxHeight: 300}}>  */}
