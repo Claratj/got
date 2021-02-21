@@ -1,0 +1,15 @@
+.footer {
+    width: 90%;
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & a{
+        font-size: 2.25rem;
+        color:white;
+        text-decoration: none;
+    }
+    &:active &a{
+        text-decoration: white;
+    }
+}
