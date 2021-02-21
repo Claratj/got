@@ -1,0 +1,19 @@
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery{
+    height:74vh;
+    width: 88%;
+    margin-top: 2.5rem;
+    padding-right: 3rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: wrap;
+    
+}

@@ -76,7 +76,7 @@ export function CharactersDetail() {
     useEffect(getCharacterDetail, []);
 
     return (
-        <div className=" ">
+        <div className="gallery-container">
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
             <div className="char-detail">
                 {character && <div className="d-flex align-items-center flex-column" >
