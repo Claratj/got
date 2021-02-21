@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.scss';
 import { useHistory } from 'react-router-dom';
-import { Form } from '../../../shared/components/Form/Form';
 import SpainFlag from '../../../assets/img/spain.svg';
 import ukFlag from '../../../assets/img/uk.svg';
+import { Form } from '../../../shared/components/Form/Form';
 
 
 
@@ -24,16 +24,14 @@ export function Header(props) {
         <div className="c-header col-11">
 
             {props.arrow &&
-                <div className="" onClick={() => history.push(props.arrow)}>
+                <div className="" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
                 </div>
             }
 
-            {props.search, props.fnClickedSearch &&
-                <Form />
-            }
 
+            {props.search && <Form fnClickedSearch={props.fnClickedSearch} />}
             <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">
 
                 {props.house &&

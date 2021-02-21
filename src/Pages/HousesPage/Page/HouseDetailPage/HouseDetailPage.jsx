@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../../../shared/consts/api.consts';
 import { useHistory, useParams } from "react-router-dom";
-import { Flags } from "../../../../core/components/Flags/Flags";
+// import { Flags } from "../../../../core/components/Flags/Flags";
 import "./HouseDetailPage.scss"
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
 import { useTranslation } from 'react-i18next';
+import { Header } from '../../../../core/components/Header/Header';
 
 
 
@@ -43,19 +44,21 @@ export function HouseDetailPage() {
 
     return (
         <div style={{ width: "90%", margin: "auto" }}>
-            <div className="d-flex justify-content-between">
+
+            <Header arrow={true} house={true} houseDetail={true} fnLanguage={changeLanguage} />
+            {/* <div className="d-flex justify-content-between">
                 <div className="d-flex " onClick={() => history.push('/houses')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
                 </div>
-
-
-
+                
+                
+                
                 <div className="d-flex justify-content-between   ">
                     <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')} ></span>
                     <Flags fnLanguage={changeLanguage} />
                 </div>
-            </div>
+            </div> */}
 
             <div>
                 {house && <figure className="c-houses-detail__figure">
@@ -121,6 +124,29 @@ export function HouseDetailPage() {
                             <p className="c-houses-detail__td">{fundationDate}</p>
                         </div>
                     </div>
+                    {/* <table className="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" className="c-houses-detail__th">LEMA</th>
+                                <th scope="col" className="c-houses-detail__th">SEDE</th>
+                                <th scope="col" className="c-houses-detail__th">REGION</th>
+                                <th scope="col" className="c-houses-detail__th">ALIANZAS</th>
+                                <th scope="col" className="c-houses-detail__th">RELIGIONES</th>
+                                <th scope="col" className="c-houses-detail__th">FUNDACION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="c-houses-detail__td">{house.words}</td>
+                                <td className="c-houses-detail__td">{house.seat}</td>
+                                <td className="c-houses-detail__td">{house.region}</td>
+                                <td className="c-houses-detail__td ">{house.allegiance}</td>
+                                <td className="c-houses-detail__td">{house.religion}</td>
+                                <td className="c-houses-detail__td">{house.createdAt}</td>
+                            </tr>
+                        </tbody>
+                    </table> */}
+
 
                 </figure>}
             </div>
@@ -129,3 +155,4 @@ export function HouseDetailPage() {
 
     );
 }
+

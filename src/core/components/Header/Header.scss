@@ -19,3 +19,24 @@
     width: 54px;
     margin-top: 21px 8px;
 }
+
+.form{
+    display: flex;
+    width: 47.188;
+    height: fit-content;
+    border-bottom: solid white 1px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .search{
+    position: relative;
+    padding: 20px 366px 4px 30px;
+    font-family: Lato;
+    font-size: 20px;
+    color: #6c6c6c;
+    background-color: black;
+    border: 0;
+  }
+  

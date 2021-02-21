@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 import { API } from '../../../../shared/consts/api.consts';
 import { Header } from '../../../../core/components/Header/Header';
 import './CharacterDetail.scss';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
 
 
 
 export function CharactersDetail() {
 
-    // const [t, i18n] = useTranslation(['translation']);
+    const [t, i18n] = useTranslation(['translation']);
 
-    // const changeLanguage = code => {
-    //     i18n.changeLanguage(code);
-    //     console.log(code);
-    // }
+    const changeLanguage = code => {
+        i18n.changeLanguage(code);
+        console.log(code);
+    }
 
     const { characterName } = useParams();
     const [character, setCharacter] = useState([]);
@@ -77,7 +77,7 @@ export function CharactersDetail() {
 
     return (
         <div className=" ">
-            <Header house={true} arrow={'/characters'} />
+            <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
             <div className="char-detail">
                 {character && <div className="d-flex align-items-center flex-column" >
                     <figure className="c-houses-detail__figure">
@@ -86,7 +86,7 @@ export function CharactersDetail() {
                     </figure>
                     <div className="row">
                         <div className="c-houses-detail__col">
-                            {/* <h3 className="c-houses-detail__th">{t('house')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('house')}</h3>
                             {house !== null && <figure className="c-houses-detail__figure">
                                 <Link to={"/houses/" + house.name}>
                                     <img className="c-houses-detail__hs" src={house.logoURL} />
@@ -94,29 +94,29 @@ export function CharactersDetail() {
                             </figure>}
                         </div>
                         <div className="c-houses-detail__col">
-                            {/* <h3 className="c-houses-detail__th">{t('allegiances')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('allegiances')}</h3>
                             <ul className="box c-houses-detail__td">
                                 {listAllegiances}
                             </ul>
                         </div>
                         <div className="c-houses-detail__col c-houses-detail__scroll">
-                            {/* <h3 className="c-houses-detail__th">{t('appearances')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('appearances')}</h3>
                             <ul className="box c-houses-detail__td">
                                 {listAppearances}
                             </ul>
                         </div>
                         <div className="c-houses-detail__col">
-                            {/* <h3 className="c-houses-detail__th">{t('father')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('father')}</h3>
                             <p className="c-houses-detail__td">{character.father}</p>
                         </div>
                         <div className="c-houses-detail__col">
-                            {/* <h3 className="c-houses-detail__th">{t('siblings')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('siblings')}</h3>
                             <ul className="box c-houses-detail__td">
                                 {listSiblings}
                             </ul>
                         </div>
                         <div className="c-houses-detail__col">
-                            {/* <h3 className="c-houses-detail__th">{t('titles')}</h3> */}
+                            <h3 className="c-houses-detail__th">{t('titles')}</h3>
                             <ul className="box c-houses-detail__td">
                                 {listTitles}
                             </ul>
