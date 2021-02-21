@@ -35,15 +35,13 @@ export function Header(props) {
             <div className="c-header-icons__home">
 
                 {props.house &&
-                    <div className="c-header-icons__home">
+                    <div >
                         <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')}> </span>
                     </div>
                 }
+                <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
+                <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
 
-                <div className="d-flex" >
-                    <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
-                    <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
-                </div>
 
             </div>
 

@@ -75,11 +75,11 @@ export function CharactersDetail() {
         <div className="gallery-detail">
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
             <div>
-                {character && <div className="c-houses-detail__figure" >
-                    <figure className="d-flex align-items-center flex-column">
+                {character && <figure className="c-houses-detail__figure" >
+                    <div className="d-flex align-items-center flex-column">
                         <img className="c-houses-detail__img" src={character.image} alt="" />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
-                    </figure>
+                    </div>
                     <div className="d-flex justify-content-between flex-wrap">
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('house')}</h3>
@@ -118,7 +118,7 @@ export function CharactersDetail() {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </figure>
                 }
             </div>
         </div>
