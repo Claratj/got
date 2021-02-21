@@ -77,11 +77,11 @@ export function ChronologyPage(props) {
 
 
   return (
-    <div>
+    <div className="gallery-container">
 
-      <Header house={true}></Header>
+      <Header house={true} />
 
-      <div className="c-chronology scroll">
+      <div className="c-chronology">
 
         <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
           "icon-circle-down b-icon b-icon--circle"}>
@@ -100,7 +100,7 @@ export function ChronologyPage(props) {
 
       </div>
 
-      <Footer></Footer>
+      <Footer />
 
     </div>
   )
