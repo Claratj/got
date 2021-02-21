@@ -8,11 +8,11 @@
     }
 
     &--arrow{
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 1.8rem;
         position: absolute;
-        top: 0;
-        left: 7.688rem;
+        top: 0%;
+        left: 0;
         
         &--font{
             font-family: var(--font-family-houses);
@@ -20,7 +20,7 @@
             margin-left: 1rem;
             position: absolute;
             top: 0;
-            left: 7.688rem;
+            left: 0.8rem;
         }
 
     }
