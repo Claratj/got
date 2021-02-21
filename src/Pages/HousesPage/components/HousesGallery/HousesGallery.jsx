@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Flags } from "../../../../core/components/Flags/Flags";
-import { Form } from "../../../../shared/components/Form/Form";
+// import { Flags } from "../../../../core/components/Flags/Flags";
+// import { Form } from "../../../../shared/components/Form/Form";
 import { useTranslation } from 'react-i18next';
 
 
 
 import "./HouseGallery.scss"
 import { Header } from "../../../../core/components/Header/Header";
+import { Footer } from "../../../../core/components/Footer/Footer";
 
 
 export function HousesGallery(props){
@@ -71,7 +72,7 @@ export function HousesGallery(props){
                 {/* </SimpleBar> */}
             </div>
             
-            
+            <Footer/>
         </div>
     );
 }

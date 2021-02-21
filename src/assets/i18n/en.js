@@ -4,6 +4,9 @@ export const en = {
     'region':'REGION',
     'allegiance':'ALLEGIANCE',
     'religion':'RELIGION',
-    'fundation':'FUNDATION'
+    'fundation':'FUNDATION',
+    'characters':'CHARACTERS',
+    'chronology':'CHRONOLOGY',
+    'houses': 'HOUSES'
 }
 

@@ -40,7 +40,7 @@ export function Header(props) {
                     </div>
                 }
 
-                <div className="d-flex" >
+                <div className="d-flex c-header-icons__flag" >
                     <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
                     <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
                 </div>

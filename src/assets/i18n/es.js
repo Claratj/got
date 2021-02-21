@@ -4,5 +4,8 @@ export const es = {
     'region':'REGION',
     'allegiance':'ALIANZAS',
     'religion':'RELIGIONES',
-    'fundation':'FUNDACION'
+    'fundation':'FUNDACION',
+    'characters':'PERSONAJES',
+    'chronology':'CRONOLOGIA',
+    'houses': 'CASAS'
 }
