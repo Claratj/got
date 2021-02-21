@@ -1,11 +1,18 @@
+.chronology-container {
+  margin: 0 auto;
+}
+
+span {
+  text-align: center;
+  margin-right: 24%;
+}
 .chronology {
 
- 
     &__card {
       width: 40%;
       border-top: 2px solid whitesmoke;
       text-align: center;
-      background-color: salmon;
+      // background-color: salmon;
     }
     &__card__img {
       object-fit: cover;
