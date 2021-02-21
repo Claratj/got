@@ -27,7 +27,6 @@ export function HousesPage() {
   return (
     <div className="gallery-container">
       <HousesGallery houses={houses} />
-      <Footer />
     </div>
   );
 }

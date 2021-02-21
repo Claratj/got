@@ -1,13 +1,13 @@
 .gallery-container {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 }
 
 .gallery{
     height:74vh;
-    width: 88%;
     margin-top: 2.5rem;
     padding-right: 3rem;
     overflow-y: scroll;
