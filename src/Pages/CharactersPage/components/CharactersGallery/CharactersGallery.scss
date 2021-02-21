@@ -1,14 +1,15 @@
 
 .character-gallery{
-    width: 248px;
+    width: 100%;
     position: relative;
     animation: fadeIn;
     animation-duration: 1s;
-    margin: 0;
-    padding: 1rem 0.5rem ;
+   
+    
    
 
     &__img {
+        
         height: 320px;
         object-fit: cover;
         object-position: top;
