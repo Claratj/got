@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from '../../../../core/components/Header/Header';
 import { useTranslation } from 'react-i18next';
 import './CharactersGallery.scss';
+import { Footer } from "../../../../core/components/Footer/Footer";
 
 
 
@@ -44,6 +45,7 @@ export function CharactersGallery(props) {
                         </div>
                     )};
             </div>
+            <Footer />
         </div>
 
     );
