@@ -3,15 +3,23 @@
 }
 
 span {
-  text-align: center;
-  margin-right: 24%;
+ 
 }
 .chronology {
 
+    &-btn{
+      text-align: center;
+      // margin-right: 24%;
+    }
+
     &__card {
-      width: 40%;
+      width: 50%;
       border-top: 2px solid whitesmoke;
       text-align: center;
+      position: relative;
+      float: left;
+     
+
       // background-color: salmon;
     }
     &__card__img {
