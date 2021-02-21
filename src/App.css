@@ -1,7 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
+  width: 100%;
   font-family: var(--font-family-base);
   color: white;
   overflow: hidden;
+
 }
 
 .App {
@@ -22,7 +30,7 @@ body{
 }
 
 .App-header {
-  background-color: black;
+  /* background-color: black; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
