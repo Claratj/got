@@ -92,13 +92,13 @@ export function ChronologyPage(props) {
 
       <div className="gallery">
 
-        <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
+        {/* <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
           "icon-circle-down b-icon b-icon--circle"}>
-        </span>
+        </span> */}
 
         {timeline.map((item, i) =>
 
-          <div className="chronology__card" key={i} style={i % 2 ? { "margin-top": "400px", "border-left": "2px solid white" } :
+          <div className="chronology__card" key={i} style={i % 2 ? { "margin-top": "200px", "border-left": "2px solid white" } :
             { "margin-top": "0px", "border-right": "2px solid white" }}>
             <p> {item.age && item.age.age} </p>
             <p>{item.name}</p>
