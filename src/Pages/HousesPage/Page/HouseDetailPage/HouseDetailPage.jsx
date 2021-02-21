@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../../../shared/consts/api.consts';
 import { useHistory, useParams } from "react-router-dom";
 // import { Flags } from "../../../../core/components/Flags/Flags";
-import "./HouseDetailPage.scss"
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
 import { useTranslation } from 'react-i18next';
 import { Header } from '../../../../core/components/Header/Header';
