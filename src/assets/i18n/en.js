@@ -12,7 +12,8 @@ export const en = {
     'house': 'HOUSE',
     'characters':'CHARACTERS',
     'chronology':'CHRONOLOGY',
-    'houses': 'HOUSES'
+    'houses': 'HOUSES',
+    'game of thrones': 'GAME OF THRONES',
 
 }
 

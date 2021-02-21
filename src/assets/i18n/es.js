@@ -12,5 +12,6 @@ export const es = {
     'house': 'CASA',
     'characters':'PERSONAJES',
     'chronology':'CRONOLOGIA',
-    'houses': 'CASAS'
+    'houses': 'CASAS',
+    'game of thrones': 'JUEGO DE TRONOS',
 }
