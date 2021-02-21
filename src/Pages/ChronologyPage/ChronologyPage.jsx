@@ -3,6 +3,8 @@ import { API } from '../../shared/consts/api.consts';
 import { LoadingContext } from '../../core/components/Loading/contexts/LoadingContext';
 import { Header } from '../../core/components/Header/Header';
 import { Footer } from '../../core/components/Footer/Footer';
+import { useTranslation } from 'react-i18next';
+
 import './Chronology.scss';
 
 
@@ -11,6 +13,13 @@ export function ChronologyPage(props) {
   const { setIsLoading } = useContext(LoadingContext);
 
   const [timeline, setTimeline] = useState([]);
+
+  const [t, i18n] = useTranslation(['translation']);
+
+  const changeLanguage = code => {
+    i18n.changeLanguage(code);
+    console.log(code);
+  }
 
   //establecemos por defecto el orden en false
   let [ascendingOrder, setAscendingOrder] = useState(false);
@@ -79,7 +88,7 @@ export function ChronologyPage(props) {
   return (
     <div className="gallery-container">
 
-      <Header house={true} />
+      <Header house={true} fnLanguage={changeLanguage} />
 
       <div className="gallery">
 
