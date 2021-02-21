@@ -1,33 +1,33 @@
+.character-gallery {
+  width: 100%;
+  position: relative;
+  animation: fadeIn;
+  animation-duration: 1s;
+  margin: 0;
+  padding: 1rem 0.5rem;
 
-.character-gallery{
-    width: 248px;
-    position: relative;
-    animation: fadeIn;
-    animation-duration: 1s;
-    margin: 0;
-    padding: 1rem 0.5rem ;
-   
-
-    &__img {
-        height: 320px;
-        object-fit: cover;
-        object-position: top;
-    }
-    &__figcaption{
-        height: 56px;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        z-index: 2;
-        bottom: 0;
-        left: 0;
-        color: white;
-        font-size: 0.875rem;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    &:hover &__figcaption{
-        opacity: 1;
-    }
+  &__img {
+    height: 320px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__figcaption {
+    height: 56px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  &:hover &__figcaption {
+    opacity: 1;
+    object-position: center;
+  }
 }
