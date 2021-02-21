@@ -6,10 +6,10 @@ import './Flags.scss'
 export function Flags(props) {
 
     function englishTranslate() {
-        props.changeLanguage('en');
+        props.fnLanguage('en');
     }
     function spanishTranslate() {
-        props.changeLanguage('es');
+        props.fnLanguage('es');
     }
 
     return (
