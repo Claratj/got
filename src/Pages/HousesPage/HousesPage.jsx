@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Footer } from "../../core/components/Footer/Footer";
 import { LoadingContext } from "../../core/components/Loading/contexts/LoadingContext";
 import { API } from "../../shared/consts/api.consts";
 import { HousesGallery } from "./components/HousesGallery/HousesGallery";
@@ -26,6 +27,7 @@ export function HousesPage() {
   return (
     <div style={{width:"90%",margin:"auto"}}>
       <HousesGallery houses={houses}  />
+      <Footer/>
     </div>
   );
 }
