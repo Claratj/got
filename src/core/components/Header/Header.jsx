@@ -21,7 +21,7 @@ export function Header(props) {
 
     return (
 
-        <div className="c-header col-11">
+        <div className="c-header">
 
             {props.arrow &&
                 <div className="" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters')}>
@@ -35,12 +35,12 @@ export function Header(props) {
             <div className="c-header-icons__home">
 
                 {props.house &&
-                    <div >
+                    <div>
                         <span className="icon-home b-icon b-icon--house" onClick={() => history.push('/')}> </span>
                     </div>
                 }
                 <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
-                <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
+                <img className="flags__en" src={ukFlag} alt="" onClick={() => englishTranslate()} />
 
 
             </div>

@@ -23,7 +23,6 @@ export function CharactersPage(props) {
     return (
         <div className="gallery-container">
             <CharactersGallery characters={characters} />
-
         </div>
     );
 }

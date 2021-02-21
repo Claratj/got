@@ -1,0 +1,25 @@
+main {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    .chronology-card {
+      height: 30rem;
+      width: 40%;
+  
+      border-top: 2px solid whitesmoke;
+  
+      .chronology-card__img__img {
+        object-fit: cover;
+        object-position: top;
+        border-radius: 50%;
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+  }
+  

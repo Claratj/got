@@ -1,0 +1,23 @@
+.c-home{
+    width: 100%;
+    height: 100%;
+
+    &__img{
+        object-fit: contain;
+        position: relative;
+    }
+
+    &__title{
+        position: absolute;
+        top: 50%;
+        z-index: 50;
+        text-align: center;
+        font-size: 140px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--white);
+    }
+}
