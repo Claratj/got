@@ -7,9 +7,13 @@ export function HomePage() {
 
     return (
         <div className="c-home">
-            <Header></Header>
-            <h1 className="c-home__title">GAME OF THRONES</h1>
-            <Footer></Footer>
+            <div className="gallery-container">
+                <Header></Header>
+                <div className="c-home__title-container">
+                    <h1 className="c-home__title">GAME OF THRONES</h1>
+                </div>
+                <Footer></Footer>
+            </div>
         </div>
     );
 }
