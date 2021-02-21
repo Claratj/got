@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { API } from '../../shared/consts/api.consts';
-import './ChronologyPage.scss';
+import { LoadingContext } from '../../core/components/Loading/contexts/LoadingContext';
+import { Header } from '../../core/components/Header/Header';
+import { Footer } from '../../core/components/Footer/Footer';
+import './Chronology.scss';
 
 
-export function ChronologyPage() {
+export function ChronologyPage(props) {
+
+  const { setIsLoading } = useContext(LoadingContext);
 
   const [timeline, setTimeline] = useState([]);
 
@@ -11,9 +16,11 @@ export function ChronologyPage() {
   let [ascendingOrder, setAscendingOrder] = useState(false);
 
   const getChronology = () => {
+
+    setIsLoading(true);
     //llamada a la api
     API.get('/show/characters').then((res) => {
-
+      setIsLoading(false)
       //recoger datos + filter
       const youngestToOldest = res.data.filter((character) => {
         //condiciones del filter
@@ -67,29 +74,34 @@ export function ChronologyPage() {
   }
 
   useEffect(getChronology, []);
-  //<p style={ i % 2 ? {"color": "white"} : {"color": "red"}} >HOLAAAAAAAA</p>
+
 
   return (
+    <div>
 
-    <main>
+      <Header house={true}></Header>
 
-      <a onClick={reverseTimelineOrder}>
-        {ascendingOrder ? <span className="icon-circle-up"></span>
-          : <span className="icon-circle-down"></span>}
-      </a>
+      <div className="c-chronology scroll">
 
+        <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
+          "icon-circle-down b-icon b-icon--circle"}>
+        </span>
 
-      {timeline.map((item, i) =>
+        {timeline.map((item, i) =>
 
-        <div className="chronology-card" key={i} style={i % 2 ?
-          { "margin-top": "400px", "border-left": "2px solid white" } :
-          { "margin-top": "0px", "border-right": "2px solid white" }}>
-          <p className="chronology-card__age"> {item.age && item.age.age} </p>
-          <p className="chronology-card__name">{item.name}</p>
-          <img className="chronology-card__img__img" src={item.image} alt={item.name} />
-        </div>
-      )}
+          <div className="c-chronology-card" key={i} style={i % 2 ? { "margin-top": "400px", "border-left": "2px solid white" } :
+            { "margin-top": "0px", "border-right": "2px solid white" }}>
+            <p className="c-chronology-card__age"> {item.age && item.age.age} </p>
+            <p className="c-chronology-card__name">{item.name}</p>
+            <img className="c-chronology-card__img" src={item.image} alt={item.name} />
+          </div>
 
-    </main>
+        )}
+
+      </div>
+
+      <Footer></Footer>
+
+    </div>
   )
 }
