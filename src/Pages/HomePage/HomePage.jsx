@@ -1,8 +1,11 @@
 import React from 'react';
+import {Footer} from '../../core/components/Footer/Footer'
 
 export function HomePage(){
 
     return(
-        <div><h1>WELCOME TO HOMEPAGE</h1> </div>
+        <div>
+         <Footer/>
+         </div>
     );
 }

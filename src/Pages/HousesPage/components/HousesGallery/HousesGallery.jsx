@@ -14,7 +14,7 @@ import { Footer } from "../../../../core/components/Footer/Footer";
 export function HousesGallery(props){
 
     const [filterHouses,setFilterHouses] =  useState([]);
-    const history=useHistory();
+    // const history=useHistory();
     const [t, i18n ] = useTranslation(['translation']);
 
     const changeLanguage = code => {
@@ -53,23 +53,23 @@ export function HousesGallery(props){
             <Header  search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
                  
             <div   className="d-flex flex-wrap  c-houses-gallery__scroll" >
-                {/* <SimpleBar style={{ maxHeight: 300}}>  */}
                 
-                    {filterHouses
-                    .filter(house =>house.logoURL)
-                    .map((house,i) =>
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 App" key={i}>
-                            <figure className="c-houses-gallery__figure">
-                            <Link to= {'/houses/'+ house.name}>
-                                <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name}/>
-                            </Link>
-                            </figure>
-                            <figcaption className="c-houses-gallery__figcaption">{house.name}</figcaption>
-                        </div>
-                    
-                    )}
+                
+                {filterHouses
+                .filter(house =>house.logoURL)
+                .map((house,i) =>
+                    <div className="col-12 col-sm-6 col-md-4 col-lg-2 App" key={i}>
+                        <figure className="c-houses-gallery__figure">
+                        <Link to= {'/houses/'+ house.name}>
+                            <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name}/>
+                        </Link>
+                        </figure>
+                        <figcaption className="c-houses-gallery__figcaption">{house.name}</figcaption>
+                    </div>
+                
+                )}
 
-                {/* </SimpleBar> */}
+               
             </div>
             
             <Footer/>

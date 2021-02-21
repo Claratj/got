@@ -4,12 +4,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & a{
-        font-size: 2.25rem;
-        color:white;
-        text-decoration: none;
-    }
-    &:active &a{
-        text-decoration: white;
-    }
+    
+}
+
+.footer__link{
+    font-size: 2.25rem;
+    color:white;
+    text-decoration: none;
+}
+
+.footer__link--active{
+    color: white;
+    text-decoration-line: underline;
+
 }

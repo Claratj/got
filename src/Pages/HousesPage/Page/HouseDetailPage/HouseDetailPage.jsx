@@ -21,7 +21,7 @@ export function HouseDetailPage(){
 
     const [house,setHouse] = useState(null);
     const {houseName} = useParams();
-     const history = useHistory();
+    //  const history = useHistory();
     const {setIsLoading} = useContext(LoadingContext)
 
     const getHouse = () => {
@@ -124,30 +124,6 @@ export function HouseDetailPage(){
                             <p className="c-houses-detail__td">{fundationDate}</p>
                         </div>
                     </div>
-                    {/* <table className="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col" className="c-houses-detail__th">LEMA</th>
-                                <th scope="col" className="c-houses-detail__th">SEDE</th>
-                                <th scope="col" className="c-houses-detail__th">REGION</th>
-                                <th scope="col" className="c-houses-detail__th">ALIANZAS</th>
-                                <th scope="col" className="c-houses-detail__th">RELIGIONES</th>
-                                <th scope="col" className="c-houses-detail__th">FUNDACION</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="c-houses-detail__td">{house.words}</td>
-                                <td className="c-houses-detail__td">{house.seat}</td>
-                                <td className="c-houses-detail__td">{house.region}</td>
-                                <td className="c-houses-detail__td ">{house.allegiance}</td>
-                                <td className="c-houses-detail__td">{house.religion}</td>
-                                <td className="c-houses-detail__td">{house.createdAt}</td>
-                            </tr>
-                        </tbody>
-                    </table> */}
-                
-                    
                 </figure>}
             </div>
 

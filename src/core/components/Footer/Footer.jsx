@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './Footer.scss';
 
@@ -15,9 +15,9 @@ export function Footer() {
     return (
 
         <div className="footer">
-            <Link to={"/characters"}>{t('characters')}</Link>
-            <Link to={"/houses"}>{t('houses')}</Link>
-            <Link to={"/chronology"}>{t('chronology')}</Link>
+            <NavLink className="footer__link"  activeClassName="footer__link--active" to={"/characters"}>{t('characters')}</NavLink>
+            <NavLink className="footer__link" exact  activeClassName="footer__link--active" to={"/houses"}>{t('houses')}</NavLink>
+            <NavLink className="footer__link"  activeClassName="footer__link--active" to={"/chronology"}>{t('chronology')}</NavLink>
         </div>
 
     )

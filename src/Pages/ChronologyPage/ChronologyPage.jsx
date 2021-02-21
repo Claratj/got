@@ -1,9 +1,10 @@
 import React from "react";
+import {Footer} from '../../core/components/Footer/Footer'
 
 export function ChronologyPage() {
   return (
     <div>
-      <h1>WELCOME TO CHRONOLOGY</h1>
+      <Footer/>
     </div>
   );
 }
