@@ -24,15 +24,15 @@ export function Header(props) {
         <div className="c-header col-11">
 
             {props.arrow &&
-                <div className="" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters') }>
+                <div className="" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters')}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
                 </div>
             }
 
-            
-            {props.search && <Form fnClickedSearch={props.fnClickedSearch}/>}
-            <div className="c-header-icons col-4 d-flex flex-row justify-content-end align-items-center">
+            {props.search && <Form fnClickedSearch={props.fnClickedSearch} />}
+
+            <div className="c-header-icons__home">
 
                 {props.house &&
                     <div className="c-header-icons__home">

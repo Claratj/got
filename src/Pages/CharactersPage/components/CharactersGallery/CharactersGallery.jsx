@@ -34,7 +34,7 @@ export function CharactersGallery(props) {
 
 
     return (
-        <div>
+        <div className="gallery-container">
             <Header search={true} house={true} fnClickedSearch={searchCharacter} />
             <div className="gallery">
                 {FilterCharacters

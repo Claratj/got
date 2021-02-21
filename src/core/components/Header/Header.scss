@@ -1,21 +1,26 @@
 .c-header {
+    width: 100vw;
     height: 10vh;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
     position: relative;
+    // background-color: royalblue;
 }
 
 .c-header-icons__home {
     padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // background-color: red;
 }
 
-.c-header-icons__flag {
-    padding: 0.5rem;
-}
+// .c-header-icons__flag {
+//     padding: 0.5rem;
+// }
 
 .flags{
     width: 54px;
-    
 }
