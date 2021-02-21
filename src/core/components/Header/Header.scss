@@ -1,0 +1,21 @@
+.c-header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.c-header-icons__home {
+    padding: 0.5rem;
+}
+
+.c-header-icons__flag {
+    padding: 0.5rem;
+}
+
+.flags{
+    width: 54px;
+    
+}

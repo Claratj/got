@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?m72eay') format('truetype'),
-    url('fonts/icomoon.woff?m72eay') format('woff'),
-    url('fonts/icomoon.svg?m72eay#icomoon') format('svg');
+    url('fonts/icomoon.ttf?sp2wew') format('truetype'),
+    url('fonts/icomoon.woff?sp2wew') format('woff'),
+    url('fonts/icomoon.svg?sp2wew#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,4 +34,10 @@
 .icon-search-1:before {
   content: "\e902";
   color: #fff;
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-down:before {
+  content: "\ea43";
 }
