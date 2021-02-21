@@ -6,6 +6,7 @@
     // align-items: center;
 }
 
+
 .gallery{
     height:74vh;
     margin-top: 2.5rem;
@@ -15,7 +16,11 @@
     scroll-behavior: smooth;
     display: flex;
     flex-wrap: wrap;
-    
+
+    &_chr{
+        height:65vh;
+        margin: 0 auto;
+    }
 }
 
 .gallery-detail {

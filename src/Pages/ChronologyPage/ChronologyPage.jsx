@@ -90,12 +90,12 @@ export function ChronologyPage(props) {
 
       <Header house={true} fnLanguage={changeLanguage} />
 
-     
-      <div className="gallery">
-        <div>
-          <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
-            "icon-circle-down b-icon b-icon--circle"}>
-          </span>
+      <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
+        "icon-circle-down b-icon b-icon--circle"}>
+      </span>
+      <div className="gallery gallery_chr">
+        <div className="chronology">
+
           {timeline.map((item, i) =>
 
             <div className="chronology__card" key={i} style={

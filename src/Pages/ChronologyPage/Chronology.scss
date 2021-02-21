@@ -2,15 +2,15 @@
   margin: 0 auto;
 }
 
-span {
- 
+span{
+  text-align: center;
+  margin-right: 24%;
 }
-.chronology {
 
-    &-btn{
-      text-align: center;
-      // margin-right: 24%;
-    }
+.chronology {
+  text-align: center;
+  margin: 0 auto;
+  width: 732px;
 
     &__card {
       width: 50%;
