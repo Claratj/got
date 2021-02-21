@@ -40,7 +40,7 @@ export function HousesGallery(props) {
 
     return (
 
-        <div >
+        <div className="gallery-container">
             {/* <div className="d-flex justify-content-between search-container">
                 <Form fnClickedSearch={searchHouse}/>
                 <div className="d-flex justify-content-between mr-5  ">
@@ -49,11 +49,10 @@ export function HousesGallery(props) {
                 </div>
                 
             </div> */}
-            <Header  search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
-                 
-            <div   className="d-flex flex-wrap  c-houses-gallery__scroll" >
-                {/* <SimpleBar style={{ maxHeight: 300}}>  */}
+            <Header search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
 
+            <div className="gallery" >
+                {/* <SimpleBar style={{ maxHeight: 300}}>  */}
                 {filterHouses
                     .filter(house => house.logoURL)
                     .map((house, i) =>
