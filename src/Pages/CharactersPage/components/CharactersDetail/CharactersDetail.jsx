@@ -58,15 +58,11 @@ export function CharactersDetail() {
             <li key={i}>{appearance}</li>
         );
     }
-
-
     if (siblings != undefined) {
         listSiblings = siblings.map((sibling, i) =>
             <li key={i}>{sibling}</li>
         );
     }
-
-
     if (titles != undefined) {
         listTitles = titles.map((title, i) =>
             <li key={i}>{title}</li>
@@ -76,15 +72,15 @@ export function CharactersDetail() {
     useEffect(getCharacterDetail, []);
 
     return (
-        <div className="gallery-container">
+        <div className="gallery-detail">
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
-            <div className="char-detail">
-                {character && <div className="d-flex align-items-center flex-column" >
-                    <figure className="c-houses-detail__figure">
+            <div>
+                {character && <div className="c-houses-detail__figure" >
+                    <figure className="d-flex align-items-center flex-column">
                         <img className="c-houses-detail__img" src={character.image} alt="" />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
                     </figure>
-                    <div className="row">
+                    <div className="d-flex justify-content-between flex-wrap">
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('house')}</h3>
                             {house !== null && <figure className="c-houses-detail__figure">
