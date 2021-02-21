@@ -3,25 +3,31 @@
     color:white;
 
     &--house{
-        font-size: 40px;
-        margin-top: 25px;
-        
+        font-size: 40px;        
     }
 
     &--arrow{
         font-size: 12px;
         margin-top: 1.8rem;
+        position: absolute;
+        top: 0;
+        left: 7.688rem;
         
         &--font{
             font-family: var(--font-family-houses);
             font-size: 20px;
             margin-left: 1rem;
+            position: absolute;
+            top: 0;
+            left: 7.688rem;
         }
 
     }
 
     &--search1{
-        margin-top: 36px;
         font-size: 18px;
+        position: absolute;
+        z-index: 2;
+        top: 40%;
     }
 }

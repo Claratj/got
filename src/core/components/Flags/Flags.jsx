@@ -3,19 +3,19 @@ import SpainFlag from '../../../assets/img/spain.svg';
 import ukFlag from '../../../assets/img/uk.svg';
 import './Flags.scss'
 
-export function Flags(props){
+export function Flags(props) {
 
-    function englishTranslate(){
+    function englishTranslate() {
         props.fnLanguage('en');
     }
-    function spanishTranslate(){
+    function spanishTranslate() {
         props.fnLanguage('es');
     }
 
-    return(
-        <div className= "d-flex" >
-            <img className= "flags" src={SpainFlag} alt="" onClick={()=>spanishTranslate()}/>
-            <img className= "flags" src={ukFlag} alt="" onClick={()=>englishTranslate()} />
+    return (
+        <div className="d-flex" >
+            <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
+            <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
         </div>
     )
 }

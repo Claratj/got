@@ -6,7 +6,7 @@ import { HousesGallery } from "./components/HousesGallery/HousesGallery";
 
 export function HousesPage() {
   const [houses, setHouses] = useState([]);
-  const {setIsLoading}= useContext(LoadingContext);
+  const { setIsLoading } = useContext(LoadingContext);
 
 
   const getHouses = () => {
@@ -20,7 +20,7 @@ export function HousesPage() {
 
   };
 
-  
+
 
   useEffect(getHouses, []);
 

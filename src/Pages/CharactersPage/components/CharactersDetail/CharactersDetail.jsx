@@ -1,25 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { API } from '../../../../shared/consts/api.consts';
+import { Header } from '../../../../core/components/Header/Header';
 import './CharacterDetail.scss';
-// import '../../../../index.scss'
+import { useTranslation } from 'react-i18next';
+import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
+
+
 
 export function CharactersDetail() {
 
-    const { characterName } = useParams();
+    const [t, i18n] = useTranslation(['translation']);
 
+    const changeLanguage = code => {
+        i18n.changeLanguage(code);
+        console.log(code);
+    }
+
+    const { characterName } = useParams();
     const [character, setCharacter] = useState([]);
     const [house, setHouse] = useState([]);
+    const { setIsLoading } = useContext(LoadingContext);
 
 
     const getCharacterDetail = () => {
+        setIsLoading(true);
         API.get("show/characters/" + characterName).then((res) => {
             setCharacter(res.data);
 
 
             API.get("show/houses/" + res.data.house).then((res2) => {
+                setIsLoading(false);
                 setHouse(res2.data[0]);
-                // console.log(res2.data[0]);
             })
         });
     };
@@ -63,50 +76,55 @@ export function CharactersDetail() {
     useEffect(getCharacterDetail, []);
 
     return (
-        <div>
-            {character && <div className="d-flex align-items-center flex-column" >
-                <figure className="c-houses-detail__figure">
-                    <img className="c-houses-detail__img" src={character.image} alt="" />
-                    <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
-                </figure>
-                <div className="row">
-                    <div className="col-2">
-                        <h3 className="c-houses-detail__th">CASA</h3>
-                        {house !== null && <figure className="c-houses-detail__figure">
-                            <img className="c-houses-detail__hs" src={house.logoURL} />
-                        </figure>}
-                    </div>
-                    <div className="col-2">
-                        <h3 className="c-houses-detail__th">ALIANZAS</h3>
-                        <ul className="box c-houses-detail__td">
-                            {listAllegiances}
-                        </ul>
-                    </div>
-                    <div className="col-2 c-houses-detail__scroll">
-                        <h3 className="c-houses-detail__th">APARICIONES</h3>
-                        <ul className="box c-houses-detail__td">
-                            {listAppearances}
-                        </ul>
-                    </div>
-                    <div className="col-2">
-                        <h3 className="c-houses-detail__th">PADRE</h3>
-                        <p className="c-houses-detail__td">{character.father}</p>
-                    </div>
-                    <div className="col-2">
-                        <h3 className="c-houses-detail__th">DESCENDIENTES</h3>
-                        <ul className="box c-houses-detail__td">
-                            {listSiblings}
-                        </ul>
-                    </div>
-                    <div className="col-2">
-                        <h3 className="c-houses-detail__th">TITULOS</h3>
-                        <ul className="box c-houses-detail__td">
-                            {listTitles}
-                        </ul>
+        <div className=" ">
+            <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
+            <div className="char-detail">
+                {character && <div className="d-flex align-items-center flex-column" >
+                    <figure className="c-houses-detail__figure">
+                        <img className="c-houses-detail__img" src={character.image} alt="" />
+                        <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
+                    </figure>
+                    <div className="row">
+                        <div className="c-houses-detail__col">
+                            <h3 className="c-houses-detail__th">{t('house')}</h3>
+                            {house !== null && <figure className="c-houses-detail__figure">
+                                <Link to={"/houses/" + house.name}>
+                                    <img className="c-houses-detail__hs" src={house.logoURL} />
+                                </Link>
+                            </figure>}
+                        </div>
+                        <div className="c-houses-detail__col">
+                            <h3 className="c-houses-detail__th">{t('allegiances')}</h3>
+                            <ul className="box c-houses-detail__td">
+                                {listAllegiances}
+                            </ul>
+                        </div>
+                        <div className="c-houses-detail__col c-houses-detail__scroll">
+                            <h3 className="c-houses-detail__th">{t('appearances')}</h3>
+                            <ul className="box c-houses-detail__td">
+                                {listAppearances}
+                            </ul>
+                        </div>
+                        <div className="c-houses-detail__col">
+                            <h3 className="c-houses-detail__th">{t('father')}</h3>
+                            <p className="c-houses-detail__td">{character.father}</p>
+                        </div>
+                        <div className="c-houses-detail__col">
+                            <h3 className="c-houses-detail__th">{t('siblings')}</h3>
+                            <ul className="box c-houses-detail__td">
+                                {listSiblings}
+                            </ul>
+                        </div>
+                        <div className="c-houses-detail__col">
+                            <h3 className="c-houses-detail__th">{t('titles')}</h3>
+                            <ul className="box c-houses-detail__td">
+                                {listTitles}
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                }
             </div>
-            }
         </div>
     );
 }
