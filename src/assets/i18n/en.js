@@ -13,7 +13,8 @@ export const en = {
     'characters':'CHARACTERS',
     'chronology':'CHRONOLOGY',
     'houses': 'HOUSES',
-    'game of thrones': 'GAME OF THRONES',
-
+    'game': 'GAME',
+    'of': 'OF',
+    'thrones': 'THRONES',
 }
 

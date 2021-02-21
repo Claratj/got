@@ -17,7 +17,7 @@ export function HomePage() {
             <div className="gallery-container">
                 <Header fnLanguage={changeLanguage} />
                 <div className="c-home__title-container">
-                    <h1 className="c-home__title">{t('game of thrones')}</h1>
+                    <h1 className="c-home__title">{t('game')} {t('of')}<br />{t('thrones')}</h1>
                 </div>
                 <Footer />
             </div>

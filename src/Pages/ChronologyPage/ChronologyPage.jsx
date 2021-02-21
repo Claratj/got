@@ -106,7 +106,6 @@ export function ChronologyPage(props) {
           </div>
 
         )}
-
       </div>
 
       <Footer />
