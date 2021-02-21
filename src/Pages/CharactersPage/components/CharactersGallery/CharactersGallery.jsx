@@ -10,6 +10,13 @@ import { Footer } from "../../../../core/components/Footer/Footer";
 export function CharactersGallery(props) {
     const [FilterCharacters, setFilterCharacters] = useState([]);
 
+    const [t, i18n] = useTranslation(['translation']);
+
+    const changeLanguage = code => {
+        i18n.changeLanguage(code);
+        console.log(code);
+    }
+
     const searchCharacter = (characterName) => {
         const findCharacter = props.characters.filter(character => {
 
@@ -30,7 +37,7 @@ export function CharactersGallery(props) {
 
     return (
         <div className="gallery-container">
-            <Header search={true} house={true} fnClickedSearch={searchCharacter} />
+            <Header search={true} house={true} fnClickedSearch={searchCharacter} fnLanguage={changeLanguage} />
             <div className="gallery">
                 {FilterCharacters
                     .filter(character => character.image)

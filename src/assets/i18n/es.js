@@ -10,5 +10,9 @@ export const es = {
     'appearances': 'APARICIONES',
     'father': 'PADRE',
     'house': 'CASA',
+    'characters':'PERSONAJES',
+    'chronology':'CRONOLOGIA',
+    'houses': 'CASAS'
+
 
 }

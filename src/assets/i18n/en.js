@@ -10,5 +10,9 @@ export const en = {
     'appearances': 'APPEARANCES',
     'father': 'FATHER',
     'house': 'HOUSE',
+    'characters':'CHARACTERS',
+    'chronology':'CHRONOLOGY',
+    'houses': 'HOUSES'
+
 }
 
