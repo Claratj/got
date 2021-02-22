@@ -4,12 +4,12 @@
     position: relative;
     animation: fadeIn;
     animation-duration: 1s;
-    margin: 0;
-    padding: 1rem 0.5rem ;
+    padding: 1.2rem;
    
 
     &__img {
         height: 20rem;
+        width: 13.5rem;
         object-fit: cover;
         object-position: top;
 
