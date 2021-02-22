@@ -7,7 +7,7 @@
 
 
 .gallery{
-    height:calc(100vh - 220px);
+    height:calc(100vh - 13.75rem);
     // height:68vh;
     margin-top: 2.5rem;
     padding-right: 3rem;
@@ -38,9 +38,9 @@
     &__img{
         object-fit: cover;
         object-position: top;
-        width: 248px;
-        height: 320px;
-        margin: 66px 160px 30px;
+        width: 15.5rem;
+        height: 20rem;
+        margin: 4.125rem 10rem 1.875rem;
     }
     &__figure{
         margin:0;
@@ -54,20 +54,20 @@
     }
 
     &__figcaption{
-        font-size: 36px;
+        font-size: 2.25rem;
         margin-bottom: 2rem;
         color: white;
         text-align: center;
     }
 
     &__hs{
-        width: 160px;
-        height: 191.6px;
+        width: 10rem;
+        height: 11.975rem;
     }
 
     &__th{
-        font-size: 24px;
-        padding: 10px 0;
+        font-size: 1.5rem;
+        padding: 0.625rem 0;
         margin-bottom: 3px;
         color: white;
         text-align: center;
@@ -75,7 +75,7 @@
     &__td{
         list-style: none;
         font-family: var(--font-family-houses);
-        font-size: 16px;
+        font-size: 1rem;
         color: white;
         text-align: center;
     }
