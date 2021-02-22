@@ -113,6 +113,6 @@ export function ChronologyPage(props) {
         <div className="timeline"></div>
       </div>
       <Footer />
-    </div >
+    </div>
   )
 }
