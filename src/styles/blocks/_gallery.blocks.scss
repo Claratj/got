@@ -10,7 +10,7 @@
     height:calc(100vh - 13.75rem);
     // height:68vh;
     // margin-top: 2.5rem;
-    padding-right: 3rem;
+    // padding-right: 3rem;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
@@ -24,7 +24,7 @@
     }
 
     &_chr{
-        height:70vh;
+        height:70%;
         margin: 0 auto 2.5rem;
     }
 }
