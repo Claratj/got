@@ -19,6 +19,9 @@ span{
       text-align: center;
       position: relative;
       float: left;
+    & p {
+      padding: 0.25rem;
+    } 
      
 
       // background-color: salmon;
