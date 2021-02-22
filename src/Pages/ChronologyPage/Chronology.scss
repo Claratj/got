@@ -1,3 +1,9 @@
+.chronology-body{
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  // background-color: pink;
+}
 .chronology-container {
   margin: 0 auto;
   position: relative;
@@ -29,7 +35,8 @@ span{
   z-index: 2;
 
     &__card {
-      width: 50%;
+      width: 22.8rem ;
+      // width: 50%;
       border-top: 2px solid white;
       float: left;
       
