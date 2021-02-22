@@ -99,8 +99,8 @@ export function ChronologyPage(props) {
           {timeline.map((item, i) =>
 
             <div className="chronology__card" key={i} style={
-              i % 2 ? { "margin-top": "200px", "border-left": "1px solid white" } :
-                { "margin-top": "0px", "border-right": "1px solid white" }}>
+              i % 2 ? { "margin-top": "12.5rem", "border-left": "3px solid white" } :
+                { "margin-top": "0px", "border-right": "3px solid white" }}>
               <p> {item.age && item.age.age} </p>
               <p>{item.name}</p>
               <img className="chronology__card__img" src={item.image} alt={item.name} />
