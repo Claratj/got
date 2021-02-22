@@ -95,12 +95,11 @@ export function ChronologyPage(props) {
       </span>
       <div className="gallery gallery_chr">
         <div className="chronology">
-
           {timeline.map((item, i) =>
 
             <div className="chronology__card" key={i} style={
-              i % 2 ? { "margin-top": "10.5rem", "border-left": "3px solid white" } :
-                { "margin-top": "0px", "border-right": "3px solid white" }}>
+              i % 2 ? { "margin-top": "10.5rem", } :
+                { "margin-top": "0px", }}>
               <p> {item.age && item.age.age} </p>
               <p>{item.name}</p>
               <img className="chronology__card__img" src={item.image} alt={item.name} />
@@ -110,6 +109,7 @@ export function ChronologyPage(props) {
 
         </div>
       </div>
+      <div className="timeline"></div>
       <Footer />
 
     </div>
