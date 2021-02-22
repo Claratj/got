@@ -15,16 +15,18 @@ span{
 
     &__card {
       width: 50%;
-      border-top: 2px solid whitesmoke;
+      border-top: 2px solid white;
       text-align: center;
       position: relative;
       float: left;
-    & p {
-      padding: 0.25rem;
-    } 
+
+      background-color: yellowgreen;
+
+      & p {
+        padding: 0.25rem;
+      } 
      
 
-      // background-color: salmon;
     }
     &__card__img {
       object-fit: cover;
