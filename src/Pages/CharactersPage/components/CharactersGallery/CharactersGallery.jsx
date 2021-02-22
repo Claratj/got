@@ -36,23 +36,22 @@ export function CharactersGallery(props) {
 
 
     return (
-        <div>
+
+        <div className="gallery-container">
             <Header search={true} house={true} fnClickedSearch={searchCharacter} fnLanguage={changeLanguage} />
-            <div className="gallery-container">
-                <div className="gallery">
-                    {FilterCharacters
-                        .filter(character => character.image)
-                        .map((character, i) =>
-                            <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6">
-                                <Link to={"/characters/" + character.name}>
-                                    <figure key={i} className="character-gallery" >
-                                        <img className="character-gallery__img" src={character.image} alt={character.name} />
-                                        <div className="character-gallery__figcaption"><p>{character.name}</p></div>
-                                    </figure>
-                                </Link>
-                            </div>
-                        )};
-                </div>
+            <div className="gallery">
+                {FilterCharacters
+                    .filter(character => character.image)
+                    .map((character, i) =>
+                        <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6">
+                            <Link to={"/characters/" + character.name}>
+                                <figure key={i} className="character-gallery" >
+                                    <img className="character-gallery__img" src={character.image} alt={character.name} />
+                                    <div className="character-gallery__figcaption"><p>{character.name}</p></div>
+                                </figure>
+                            </Link>
+                        </div>
+                    )};
             </div>
             <Footer />
         </div>
