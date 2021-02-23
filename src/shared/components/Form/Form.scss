@@ -1,19 +1,32 @@
 .form{
+  //   display: flex;
+  //   width:50%;
+  //   height: fit-content;
+  //   border-bottom: solid white 1px;
+  //   margin: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //
   display: flex;
-  width: 47.188;
-  height: fit-content;
+  width: 45%;
   border-bottom: solid white 1px;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+
 }
 .search{
-  position: relative;
-  padding: 20px 366px 4px 30px;
+  // width: 100%;
+  // position: relative;
+  
+  // font-family: Lato;
+  // font-size: 20px;
+  // color: #6c6c6c;
+  // background-color: black;
+  // border: 0;
+  margin: 19px 366px 0px 12px;
   font-family: Lato;
   font-size: 20px;
   color: #6c6c6c;
   background-color: black;
   border: 0;
+
 }

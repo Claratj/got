@@ -38,13 +38,13 @@ export function HousesGallery(props) {
 
     return (
 
-        <div className="gallery-container">
+        <div >
             <Header search={true} house={true} fnClickedSearch={searchHouse} fnLanguage={changeLanguage} />
-            <div className="gallery" >
+            <div className="d-flex flex-wrap  c-houses-gallery__scroll" >
                 {filterHouses
                     .filter(house => house.logoURL)
                     .map((house, i) =>
-                        <div className="col-12 col-sm-4 col-md-2 col-lg-2 App" key={i}>
+                        <div className="col-12 col-sm-4 col-md-3 col-lg-2 App" key={i}>
                             <figure className="c-houses-gallery__figure">
                                 <Link to={'/houses/' + house.name}>
                                     <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name} />

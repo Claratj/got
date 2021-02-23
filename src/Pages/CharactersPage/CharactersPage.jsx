@@ -21,7 +21,7 @@ export function CharactersPage(props) {
     };
     useEffect(getCharacters, []);
     return (
-        <div className="gallery-container">
+        <div style={{"width":"90%","margin":"auto"}} >
             <CharactersGallery characters={characters} />
         </div>
     );

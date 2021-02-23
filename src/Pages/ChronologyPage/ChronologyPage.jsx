@@ -88,7 +88,7 @@ export function ChronologyPage(props) {
   return (
     <div className="gallery-container">
 
-      <Header house={true} fnLanguage={changeLanguage} />
+      <Header house={true} fnLanguage={changeLanguage} flags={true} />
 
       <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
         "icon-circle-down b-icon b-icon--circle"}>

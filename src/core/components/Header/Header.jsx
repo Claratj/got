@@ -21,7 +21,7 @@ export function Header(props) {
 
     return (
 
-        <div className="c-header">
+        <div className={props.flags ? "c-header d-block d-sm-flex justify-content-end":"c-header d-block d-sm-flex"}>
 
             {props.arrow &&
                 <div className="" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters')}>
@@ -32,7 +32,7 @@ export function Header(props) {
 
             {props.search && <Form fnClickedSearch={props.fnClickedSearch} />}
 
-            <div className="c-header-icons__home">
+            <div className="c-header-icons__home" >
 
                 {props.house &&
                     <div>
@@ -40,7 +40,7 @@ export function Header(props) {
                     </div>
                 }
                 <img className="flags" src={SpainFlag} alt="" onClick={() => spanishTranslate()} />
-                <img className="flags__en" src={ukFlag} alt="" onClick={() => englishTranslate()} />
+                <img className="flags" src={ukFlag} alt="" onClick={() => englishTranslate()} />
 
 
             </div>

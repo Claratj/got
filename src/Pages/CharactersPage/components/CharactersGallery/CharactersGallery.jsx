@@ -36,13 +36,13 @@ export function CharactersGallery(props) {
 
 
     return (
-        <div className="gallery-container">
+        <div >
             <Header search={true} house={true} fnClickedSearch={searchCharacter} fnLanguage={changeLanguage} />
-            <div className="gallery">
+            <div className="d-block d-flex flex-wrap character-gallery__scroll ">
                 {FilterCharacters
                     .filter(character => character.image)
                     .map((character, i) =>
-                        <div className="col-12 col-sm-4 col-md-2 col-auto">
+                        <div className="col-12 col-sm-4 col-md-3 col-lg-2 " style={{"padding": "0"}}>
                             <Link to={"/characters/" + character.name}>
                                 <figure key={i} className="character-gallery" >
                                     <img className="character-gallery__img" src={character.image} alt={character.name} />
