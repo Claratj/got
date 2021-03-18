@@ -7,20 +7,32 @@
   top: 0;
   left: 0;
   
+  .MuiInputBase-root {
+    font-family: Lato;
+  }
+
   .MuiInputBase-input {
     color: #6c6c6c;
     width: 18rem;
-    border-bottom: solid white 1px;
+    border-bottom: solid #6c6c6c 1px;
     height: fit-content;
     padding: 1rem 0.25rem 0.5rem 1.2rem;
-    // font-family: Lato;
     font-size: 1.25rem;
+  }
+
+  .MuiInput-underline:after {
+    border-bottom: solid white 1px;
+
+  }
+
+
+  .MuiInputBase-inputAdornedStart:after{
+  }
+  .MuiInputBase-inputAdornedStart {
+
   }
 }
 
 
 // MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart
 
-.MuiInput-input {
-
-}
