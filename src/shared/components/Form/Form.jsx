@@ -16,19 +16,21 @@ export function Form(props) {
 
     }
     return (
-
-        <FormControl >
-            <InputLabel htmlFor="title"></InputLabel>
-            <Input className="search"
-                id="title"
-                startAdornment={
-                    <InputAdornment position="start">
-                        <span className="b-icon b-icon--search1 icon-search-1"></span>
-                    </InputAdornment>
-                }
-                onChange={submitForm}
-            />
-        </FormControl>
+        <div className="form">
+            <FormControl>
+                {/* <InputLabel htmlFor="title"></InputLabel> */}
+                <Input
+                    id="title"
+                    placeholder="Search"
+                    startAdornment={
+                        <InputAdornment position="start">
+                            <span className="b-icon b-icon--search1 icon-search-1"></span>
+                        </InputAdornment>
+                    }
+                    onChange={submitForm}
+                />
+            </FormControl>
+        </div>
 
     );
 
