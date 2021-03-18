@@ -4,9 +4,10 @@ import { LoadingContext } from '../../core/components/Loading/contexts/LoadingCo
 import { Header } from '../../core/components/Header/Header';
 import { Footer } from '../../core/components/Footer/Footer';
 import { useTranslation } from 'react-i18next';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 import './Chronology.scss';
-
 
 export function ChronologyPage(props) {
 
@@ -88,10 +89,10 @@ export function ChronologyPage(props) {
   return (
     <div className="gallery-container">
       <Header house={true} fnLanguage={changeLanguage} />
-      <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
+      {/* <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
         "icon-circle-down b-icon b-icon--circle"}>
-      </span>
-      <div className="gallery gallery_chr">
+      </span> */}
+      {/*<div className="gallery gallery_chr">
         <div className="chronology">
 
           {timeline.map((item, i) =>
@@ -109,7 +110,34 @@ export function ChronologyPage(props) {
 
         </div>
       </div>
-      <div className="timeline"></div>
+      <div className="timeline"></div> */}
+
+      <div className="gallery gallery_chr">
+        <div className="chronology">
+
+          <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
+            "icon-circle-down b-icon b-icon--circle"}>
+          </span>
+          <VerticalTimeline>
+
+            {timeline.map((item, i) =>
+
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ "background-color": '#000', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '0px solid  #fff' }}
+                iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+              >
+                <p>{item.age && item.age.age}</p>
+                <p>{item.name}</p>
+                <img className="chronology__card__img" src={item.image} alt={item.name} />
+
+              </VerticalTimelineElement>)}
+
+          </VerticalTimeline>
+        </div>
+      </div>
+
       <Footer />
     </div>
   )
