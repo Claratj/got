@@ -55,8 +55,17 @@
       height: 7rem;
       width: 7rem;
     }
-    
-  
+     
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  margin-left: 60px;
+  background: #fff;
+  border-radius: .25em;
+  padding: 1em;
+  -webkit-box-shadow: 0 1px 0 #000000;
+  box-shadow: 0 1px 0 #000000;
 }
 
 

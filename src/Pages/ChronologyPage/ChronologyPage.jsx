@@ -112,6 +112,7 @@ export function ChronologyPage(props) {
       </div>
       <div className="timeline"></div> */}
 
+      <div className="gallery gallery_chr">
       <div className="chronology">
         <VerticalTimeline>
 
@@ -120,9 +121,10 @@ export function ChronologyPage(props) {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
-              contentArrowStyle={{ borderRight: '7px solid  rgb(0, 0, 0)' }}
+              contentArrowStyle={{ borderRight: '0px solid  rgb(0, 0, 0)' }}
               iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
             >
+          
               <p>{item.age && item.age.age}</p>
               <p>{item.name}</p>
               <img className="chronology__card__img" src={item.image} alt={item.name} />
@@ -130,6 +132,7 @@ export function ChronologyPage(props) {
             </VerticalTimelineElement>)}
 
         </VerticalTimeline>
+      </div>
       </div>
 
       <Footer />
