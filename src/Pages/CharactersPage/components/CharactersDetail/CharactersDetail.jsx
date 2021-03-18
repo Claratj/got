@@ -78,7 +78,7 @@ export function CharactersDetail() {
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
             <div>
                 {character && <figure className="c-houses-detail__figure" >
-                    <div className="d-flex align-items-center flex-column">
+                    <div className="gallery-detail_pic">
                         <img className="c-houses-detail__img" src={character.image} alt="" />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
                     </div>

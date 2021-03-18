@@ -34,6 +34,14 @@
     width: 80%;
     margin: 0 auto;
 
+    &_pic{
+        height: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     &_table {
         height: 299px;
         display: flex;
@@ -43,6 +51,8 @@
 }
 
 .c-houses-detail{
+
+
     &__img{
         max-width: 248px;
         max-height: 320px;
