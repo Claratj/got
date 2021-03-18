@@ -35,7 +35,7 @@
     margin: 0 auto;
 
     &_table {
-        
+        height: 299px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -62,14 +62,14 @@
     }
     &__col{
         height: 231px;
-        width: 12%;
+        width: 15vw;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     &__hs{
-        width: 100%;
+        width: 130px;
  
     }
 
