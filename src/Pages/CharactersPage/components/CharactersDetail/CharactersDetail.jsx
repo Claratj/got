@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { API } from '../../../../shared/consts/api.consts';
 import { Header } from '../../../../core/components/Header/Header';
+import { Footer } from '../../../../core/components/Footer/Footer';
 import './CharacterDetail.scss';
 import { useTranslation } from 'react-i18next';
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
@@ -39,7 +40,7 @@ export function CharactersDetail() {
 
     const allegiances = character.allegiances;
     let listAllegiances = [];
-    
+
     const appearances = character.appearances;
     let listAppearances = [];
     const siblings = character.siblings;
@@ -122,6 +123,7 @@ export function CharactersDetail() {
                 </figure>
                 }
             </div>
+            <Footer />
         </div>
     );
 }
