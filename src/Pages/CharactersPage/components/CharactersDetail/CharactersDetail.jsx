@@ -82,7 +82,7 @@ export function CharactersDetail() {
                         <img className="c-houses-detail__img" src={character.image} alt="" />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
                     </div>
-                    <div className="d-flex justify-content-between flex-wrap">
+                    <div className="gallery-detail_table">
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('house')}</h3>
                             {house !== null && <figure className="c-houses-detail__figure">
