@@ -10,7 +10,7 @@
     height:calc(100vh - 13.75rem);
     // height:68vh;
     // margin-top: 2.5rem;
-    // padding-right: 3rem;
+    padding-right: 3rem;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
@@ -24,7 +24,7 @@
     }
 
     &_chr{
-        height:70%;
+        height:70vh;
         margin: 0 auto 2.5rem;
     }
 }
@@ -38,7 +38,7 @@
     &__img{
         object-fit: cover;
         object-position: top;
-        width: 15.5rem;
+        width: 15%;
         height: 20rem;
         margin: 4.125rem 10rem 1.875rem;
     }
@@ -47,7 +47,7 @@
     }
 
     &__col{
-        width: 12vw;
+        width: 12%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,12 +61,13 @@
     }
 
     &__hs{
-        width: 10rem;
-        height: 11.975rem;
+        width: 100%;
+        // margin: 0 auto;
+        // height: 11.975rem;
     }
 
     &__th{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 0.625rem 0;
         margin-bottom: 3px;
         color: white;

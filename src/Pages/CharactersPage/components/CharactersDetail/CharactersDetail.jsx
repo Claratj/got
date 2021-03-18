@@ -39,6 +39,7 @@ export function CharactersDetail() {
 
     const allegiances = character.allegiances;
     let listAllegiances = [];
+    
     const appearances = character.appearances;
     let listAppearances = [];
     const siblings = character.siblings;
