@@ -15,6 +15,9 @@ export function CharactersPage(props) {
         setIsLoading(true);
         API.get("show/characters").then((res) => {
             setIsLoading(false);
+
+            //propuesta de filtrado para los que no tienen nombre
+
             setCharacters(res.data);
         });
 

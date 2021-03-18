@@ -14,11 +14,11 @@ export function Footer() {
 
     return (
 
-        <div className="footer">
+        <footer className="footer">
             <NavLink className="footer__link" activeClassName="footer__link--active" to={"/characters"}>{t('characters')}</NavLink>
             <NavLink className="footer__link" exact activeClassName="footer__link--active" to={"/houses"}>{t('houses')}</NavLink>
             <NavLink className="footer__link" activeClassName="footer__link--active" to={"/chronology"}>{t('chronology')}</NavLink>
-        </div>
+        </footer>
 
     )
 }

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { API } from '../../../../shared/consts/api.consts';
 import { Header } from '../../../../core/components/Header/Header';
+import { Footer } from '../../../../core/components/Footer/Footer';
 import './CharacterDetail.scss';
 import { useTranslation } from 'react-i18next';
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
@@ -39,6 +40,7 @@ export function CharactersDetail() {
 
     const allegiances = character.allegiances;
     let listAllegiances = [];
+
     const appearances = character.appearances;
     let listAppearances = [];
     const siblings = character.siblings;
@@ -74,53 +76,54 @@ export function CharactersDetail() {
     return (
         <div className="gallery-detail">
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
-            <div>
-                {character && <figure className="c-houses-detail__figure" >
-                    <div className="d-flex align-items-center flex-column">
-                        <img className="c-houses-detail__img" src={character.image} alt="" />
-                        <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
+            {/* <div> */}
+            {character && <figure className="c-houses-detail__figure" >
+                <div className="gallery-detail_pic">
+                    <img className="c-houses-detail__img" src={character.image} alt="" />
+                    <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
+                </div>
+                <div className="gallery-detail_table">
+                    <div className="c-houses-detail__col">
+                        <h3 className="c-houses-detail__th">{t('house')}</h3>
+                        {house !== null && <figure className="c-houses-detail__figure">
+                            <Link to={"/houses/" + house.name}>
+                                <img className="c-houses-detail__hs" src={house.logoURL} />
+                            </Link>
+                        </figure>}
                     </div>
-                    <div className="d-flex justify-content-between flex-wrap">
-                        <div className="c-houses-detail__col">
-                            <h3 className="c-houses-detail__th">{t('house')}</h3>
-                            {house !== null && <figure className="c-houses-detail__figure">
-                                <Link to={"/houses/" + house.name}>
-                                    <img className="c-houses-detail__hs" src={house.logoURL} />
-                                </Link>
-                            </figure>}
-                        </div>
-                        <div className="c-houses-detail__col">
-                            <h3 className="c-houses-detail__th">{t('allegiances')}</h3>
-                            <ul className="box c-houses-detail__td">
-                                {listAllegiances}
-                            </ul>
-                        </div>
-                        <div className="c-houses-detail__col c-houses-detail__scroll">
-                            <h3 className="c-houses-detail__th">{t('appearances')}</h3>
-                            <ul className="box c-houses-detail__td">
-                                {listAppearances}
-                            </ul>
-                        </div>
-                        <div className="c-houses-detail__col">
-                            <h3 className="c-houses-detail__th">{t('father')}</h3>
-                            <p className="c-houses-detail__td">{character.father}</p>
-                        </div>
-                        <div className="c-houses-detail__col">
-                            <h3 className="c-houses-detail__th">{t('siblings')}</h3>
-                            <ul className="box c-houses-detail__td">
-                                {listSiblings}
-                            </ul>
-                        </div>
-                        <div className="c-houses-detail__col">
-                            <h3 className="c-houses-detail__th">{t('titles')}</h3>
-                            <ul className="box c-houses-detail__td">
-                                {listTitles}
-                            </ul>
-                        </div>
+                    <div className="c-houses-detail__col">
+                        <h3 className="c-houses-detail__th">{t('allegiances')}</h3>
+                        <ul className="box c-houses-detail__td">
+                            {listAllegiances}
+                        </ul>
                     </div>
-                </figure>
-                }
-            </div>
+                    <div className="c-houses-detail__col c-houses-detail__scroll">
+                        <h3 className="c-houses-detail__th">{t('appearances')}</h3>
+                        <ul className="box c-houses-detail__td">
+                            {listAppearances}
+                        </ul>
+                    </div>
+                    <div className="c-houses-detail__col">
+                        <h3 className="c-houses-detail__th">{t('father')}</h3>
+                        <p className="c-houses-detail__td">{character.father}</p>
+                    </div>
+                    <div className="c-houses-detail__col">
+                        <h3 className="c-houses-detail__th">{t('siblings')}</h3>
+                        <ul className="box c-houses-detail__td">
+                            {listSiblings}
+                        </ul>
+                    </div>
+                    <div className="c-houses-detail__col">
+                        <h3 className="c-houses-detail__th">{t('titles')}</h3>
+                        <ul className="box c-houses-detail__td">
+                            {listTitles}
+                        </ul>
+                    </div>
+                </div>
+            </figure>
+            }
+            {/* </div> */}
+            <Footer />
         </div>
     );
 }

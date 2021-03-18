@@ -1,32 +1,57 @@
+
 .chronology-container {
   margin: 0 auto;
+  position: relative;
 }
 
-span{
-  text-align: center;
-  margin-right: 4%;
+.timeline {
+  content: '';
+  height:70vh;
+  position: absolute;
+  width: 3px;
+  background-color: whitesmoke;
+  top: 4.5rem;
+  bottom: 0;
+  left: 48.5%;
+  z-index: 0;
+  // margin-left: -3px;
+}
+
+.b-icon--circle{
+  // text-align: center;
+  // margin-right: 3.4%;
+  position: absolute;
+  top: 3rem;
+  bottom: 0;
+  left: 48%;
+  z-index: 0;
  
 }
 
 .chronology {
   text-align: center;
   margin: 0 auto;
-  width: 732px;
+  width: 45.75rem;
+  z-index: 2;
 
     &__card {
-      width: 50%;
-      border-top: 2px solid whitesmoke;
-      text-align: center;
-      position: relative;
+      width: 22.8rem ;
+      // width: 50%;
+      border-top: 2px solid white;
       float: left;
+      
+      
+      & p {
+        // text-align: center;
+        padding: 0.25rem;
+      } 
      
 
-      // background-color: salmon;
     }
     &__card__img {
       object-fit: cover;
       object-position: top;
-      border-radius: 50%;
+      border-radius: 100%;
       height: 7rem;
       width: 7rem;
     }
