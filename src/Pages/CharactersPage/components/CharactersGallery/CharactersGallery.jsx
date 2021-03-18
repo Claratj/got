@@ -36,13 +36,14 @@ export function CharactersGallery(props) {
 
 
     return (
+
         <div className="gallery-container">
             <Header search={true} house={true} fnClickedSearch={searchCharacter} fnLanguage={changeLanguage} />
             <div className="gallery">
                 {FilterCharacters
                     .filter(character => character.image)
                     .map((character, i) =>
-                        <div className="col-12 col-sm-4 col-md-2 col-auto">
+                        <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6">
                             <Link to={"/characters/" + character.name}>
                                 <figure key={i} className="character-gallery" >
                                     <img className="character-gallery__img" src={character.image} alt={character.name} />

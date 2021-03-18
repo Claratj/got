@@ -1,31 +1,36 @@
 
 .character-gallery{
-    width: 248px;
+    width: 100%;
     position: relative;
-    animation: fadeIn;
+    // animation: fadeIn;
     animation-duration: 1s;
-    margin: 0;
-    padding: 1rem 0.5rem ;
+    padding: 1.3rem 0;
    
 
     &__img {
-        height: 320px;
+        height: 19rem;
+        width: 100%;
         object-fit: cover;
         object-position: top;
+
     }
     &__figcaption{
-        height: 56px;
+        height: 3.5rem;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.75rem;
         position: absolute;
         z-index: 2;
         bottom: 0;
         left: 0;
         color: white;
         font-size: 0.875rem;
-        text-align: center;
         opacity: 0;
         transition: opacity 0.3s;
+        text-align: center;
+        // & p {
+        //     // vertical-align: middle;
+        // }
     }
     &:hover &__figcaption{
         opacity: 1;
