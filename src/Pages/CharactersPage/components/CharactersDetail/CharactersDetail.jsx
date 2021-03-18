@@ -3,11 +3,9 @@ import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { API } from '../../../../shared/consts/api.consts';
 import { Header } from '../../../../core/components/Header/Header';
-import { Footer } from '../../../../core/components/Footer/Footer';
 import './CharacterDetail.scss';
 import { useTranslation } from 'react-i18next';
 import { LoadingContext } from '../../../../core/components/Loading/contexts/LoadingContext';
-
 
 
 export function CharactersDetail() {
@@ -77,7 +75,7 @@ export function CharactersDetail() {
         <div className="gallery-detail">
             <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
             <div className="d-flex justify-content-center align-items-center">
-                {character && <figure className="c-houses-detail__figure" >
+                {character && <figure>
                     <div className="gallery-detail_pic">
                         <img className="c-houses-detail__img" src={character.image} alt="" />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>

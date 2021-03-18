@@ -98,3 +98,16 @@
     }
   
 }
+
+@media (min-width: 300px) {
+
+    .gallery-detail_table{
+        height: fit-content;
+        flex-direction: column;
+        // overflow-y: scroll;
+    }
+}
+
+// @media (min-width: 576px) { ... }
+
+// @media (min-width: 768px) { ... }
