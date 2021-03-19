@@ -9,7 +9,7 @@ body{
   width: 100%;
   font-family: var(--font-family-base);
   color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
 
 }
 
