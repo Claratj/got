@@ -28,15 +28,9 @@
         margin: 0 auto 2.5rem;
     }
 }
+
 li {
     padding: 0.6rem 0;
-}
-
-.box{
-    height: 14.438rem;
-    width: 100%;
-    overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 
@@ -56,8 +50,6 @@ li {
     &_table {
         height: 299px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 }
 
@@ -83,7 +75,7 @@ li {
     }
     &__col{
         height: 231px;
-        width: 15vw;
+        // width: 15vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -106,6 +98,10 @@ li {
         font-size: 16px;
         color: white;
         text-align: center;
+        // height: 14.438rem;
+        width: 100%;
+        overflow-y: auto;
+        scroll-behavior: smooth;
     }
   
 }
@@ -118,30 +114,51 @@ li {
 
     .c-houses-detail {
         // &_pic {
-        //     padding-top: 5rem;
+        //     margin-top: 5rem;
         // }
         &__figcaption {
             padding-bottom: 1rem;
             border-bottom: solid #6c6c6c 1px;
         }
-        &__th {
-            margin-top: 2rem;
-        }
         &__col {
-            width: 100%;
+            margin: 2rem 0;
+            width: 80vw;
         }
         &__td {
             overflow-y: auto;
-
         }
+    
     }
     .gallery-detail_table{
         // height: fit-content;
         flex-direction: column;
+        // margin-bottom: 5rem;
         // overflow-y: scroll;
     }
 }
 
-// @media (min-width: 576px) { ... }
+@media (min-width: 576px) {
+    .gallery-detail_table{
+        justify-content: space-between;
+        align-items: center;
+        
+        // flex-wrap: wrap;
+        // height: fit-content;
+        // margin-bottom: 5rem;
+        // overflow-y: scroll;
+    }
+    .c-houses-detail {
+        &__img {
+            width: 80vw;
+            margin-bottom: 3rem;
+            }
+        &__col {
+            // width: vw;
+        }
 
-// @media (min-width: 768px) { ... }
+    }
+}
+
+@media (min-width: 768px) {
+
+}
