@@ -77,7 +77,7 @@ export function CharactersDetail() {
             <div className="d-flex justify-content-center align-items-center">
                 {character && <figure>
                     <div className="gallery-detail_pic">
-                        <img className="c-houses-detail__img" src={character.image} alt="" />
+                        <img className="c-houses-detail__img" src={character.image} />
                         <figcaption className="c-houses-detail__figcaption">{character.name}</figcaption>
                     </div>
                     <div className="gallery-detail_table">
@@ -91,13 +91,13 @@ export function CharactersDetail() {
                         </div>
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('allegiances')}</h3>
-                            <ul className="box c-houses-detail__td">
+                            <ul className="c-houses-detail__td">
                                 {listAllegiances}
                             </ul>
                         </div>
                         <div className="c-houses-detail__col c-houses-detail__scroll">
                             <h3 className="c-houses-detail__th">{t('appearances')}</h3>
-                            <ul className="box c-houses-detail__td">
+                            <ul className="c-houses-detail__td">
                                 {listAppearances}
                             </ul>
                         </div>
@@ -107,13 +107,13 @@ export function CharactersDetail() {
                         </div>
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('siblings')}</h3>
-                            <ul className="box c-houses-detail__td">
+                            <ul className="c-houses-detail__td">
                                 {listSiblings}
                             </ul>
                         </div>
                         <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('titles')}</h3>
-                            <ul className="box c-houses-detail__td">
+                            <ul className="c-houses-detail__td">
                                 {listTitles}
                             </ul>
                         </div>
