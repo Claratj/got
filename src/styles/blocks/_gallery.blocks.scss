@@ -36,7 +36,7 @@ li {
 
 .gallery-detail {
     height:calc(100vh - 13.75rem);
-    width: 80%;
+    // width: 80%; Conflicto con el header??
     margin: 0 auto;
 
     &_pic{
@@ -141,6 +141,8 @@ li {
     .gallery-detail_table{
         justify-content: space-between;
         align-items: center;
+        width: 100vw;
+        height: fit-content;
         
         // flex-wrap: wrap;
         // height: fit-content;
@@ -153,7 +155,7 @@ li {
             margin-bottom: 3rem;
             }
         &__col {
-            // width: vw;
+            width: 30vw;
         }
 
     }

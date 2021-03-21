@@ -9,18 +9,10 @@
 
     &--arrow{
         font-size: 0.875rem;
-        margin-top: 1.8rem;
-        position: absolute;
-        top: 0;
-        left: 0;
         
         &--font{
             font-family: var(--font-family-houses);
-            font-size: 1.25rem;
-            margin-left: 1rem;
-            position: absolute;
-            top: 1.3rem;
-            left: 0.8rem;
+            font-size: 1rem;
         }
 
     }
@@ -34,8 +26,70 @@
 
     &--circle{
         font-size: 1.5rem;
-        // position: absolute;
-        // top: 250px;
     }
 
+}
+
+@media (min-width: 300px) {
+    .b-icon{
+   
+        &--house{
+            font-size: 1.2rem;
+        }
+    
+        &--arrow{
+            font-size: 0.875rem;
+            padding-bottom: 1rem;
+            
+            &--font{
+                font-family: var(--font-family-houses);
+                font-size:  0;
+            }
+    
+        }
+    
+        &--search1{
+            font-size: 1.125rem;
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+        }
+    
+        &--circle{
+            font-size: 1.5rem;
+        }
+    
+    }
+}
+
+@media (min-width: 576px) {
+    .b-icon{
+   
+        &--house{
+            font-size: 1.4rem;
+        }
+    
+        &--arrow{
+            font-size: 0.875rem;
+            padding-bottom: 1rem;
+            
+            &--font{
+                font-family: var(--font-family-houses);
+                font-size:  0;
+            }
+    
+        }
+    
+        &--search1{
+            font-size: 1.125rem;
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+        }
+    
+        &--circle{
+            font-size: 1.5rem;
+        }
+    
+    }
 }
