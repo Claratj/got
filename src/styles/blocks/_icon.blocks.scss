@@ -93,3 +93,35 @@
     
     }
 }
+
+@media (min-width: 576px) {
+    .b-icon{
+   
+        &--house{
+            font-size: 2rem;
+        }
+    
+        &--arrow{
+            font-size: 0.875rem;
+            padding-bottom: 1rem;
+            
+            &--font{
+                font-family: var(--font-family-houses);
+                font-size:  0;
+            }
+    
+        }
+    
+        &--search1{
+            font-size: 1.125rem;
+            position: absolute;
+            z-index: 2;
+            top: 40%;
+        }
+    
+        &--circle{
+            font-size: 1.5rem;
+        }
+    
+    }
+}
