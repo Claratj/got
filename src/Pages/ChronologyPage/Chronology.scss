@@ -59,7 +59,7 @@
 .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 30px;
     height: 30px;
-    left: 52.25%;
+    left: 51.35%;
     margin-left: -30px;
 }
 }
@@ -80,6 +80,7 @@
 .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in, .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
     -webkit-animation: none;
     animation: none;
+    
 }
 }
 
