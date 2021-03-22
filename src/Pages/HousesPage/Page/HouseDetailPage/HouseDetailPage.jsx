@@ -42,69 +42,67 @@ export function HouseDetailPage() {
 
     return (
         <div className="gallery-detail">
-
             <Header arrow={true} house={true} houseDetail={true} fnLanguage={changeLanguage} />
-
-            <div>
-                {house && <figure className="c-houses-detail__figure">
-                    <div className="d-flex align-items-center flex-column">
+            <div className="d-flex justify-content-center align-items-center">
+                {house && <figure>
+                    <div className="gallery-detail_pic">
                         <img className="c-houses-detail__img" src={house.logoURL} alt={house.name} />
                         <figcaption className="c-houses-detail__figcaption" >{house.name}</figcaption>
                     </div>
-                    <div className="d-flex justify-content-between flex-wrap">
-                        <div >
+                    <div className="gallery-detail_table">
+                        <div className="c-houses-detail__col" >
                             <h3 className="c-houses-detail__th">{t('words')}</h3>
                             <p className="c-houses-detail__td">{house.words}</p>
                         </div>
-                        <div  >
+                        <div className="c-houses-detail__col" >
                             <h3 className="c-houses-detail__th">{t('seat')}</h3>
 
                             <ul className="c-houses-detail__td">
                                 {house.seat.map((seat, i) => {
                                     return (
-                                        <li className="c-houses-detail__li" key={i}>{seat}</li>
+                                        <li key={i}>{seat}</li>
                                     )
                                 })}
                             </ul>
 
                         </div>
-                        <div >
+                        <div className="c-houses-detail__col" >
                             <h3 className="c-houses-detail__th">{t('region')}</h3>
 
                             <ul className="c-houses-detail__td">
                                 {house.region.map((region, i) => {
                                     return (
-                                        <li className="c-houses-detail__li" key={i}>{region}</li>
+                                        <li key={i}>{region}</li>
                                     )
                                 })}
                             </ul>
 
                         </div>
-                        <div >
+                        <div className="c-houses-detail__col">
                             <h3 className="c-houses-detail__th">{t('allegiance')}</h3>
 
                             <ul className="c-houses-detail__td">
                                 {house.allegiance.map((aliado, i) => {
                                     return (
-                                        <li className="c-houses-detail__li" key={i}>{aliado}</li>
+                                        <li key={i}>{aliado}</li>
                                     )
                                 })}
                             </ul>
 
                         </div>
-                        <div >
+                        <div className="c-houses-detail__col" >
                             <h3 className="c-houses-detail__th">{t('religion')}</h3>
 
                             <ul className="c-houses-detail__td">
                                 {house.religion.map((religion, i) => {
                                     return (
-                                        <li className="c-houses-detail__li" key={i}>{religion}</li>
+                                        <li key={i}>{religion}</li>
                                     )
                                 })}
                             </ul>
 
                         </div>
-                        <div >
+                        <div className="c-houses-detail__col" >
                             <h3 className="c-houses-detail__th">{t('fundation')}</h3>
                             <p className="c-houses-detail__td">{fundationDate}</p>
                         </div>

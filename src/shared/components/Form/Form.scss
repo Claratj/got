@@ -1,10 +1,12 @@
 .form{
-  display: flex;
-  width: fit-content;
-  margin-top: 0.18rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  flex: 1;
+  // display: flex;
+  // width: fit-content;
+  // margin-top: 0.18rem;
+  padding-bottom: 1rem;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   
   .MuiInputBase-root {
     font-family: Lato;
@@ -12,7 +14,8 @@
 
   .MuiInputBase-input {
     color: #6c6c6c;
-    width: 18rem;
+    // width: 18rem;
+    flex: 1;
     border-bottom: solid #6c6c6c 1px;
     height: fit-content;
     padding: 1rem 0.25rem 0.5rem 1.2rem;
