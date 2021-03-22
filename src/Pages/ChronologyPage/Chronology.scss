@@ -1,9 +1,4 @@
 
-.chronology-container {
-  margin: 0 auto;
-  position: relative;
-}
-
 .timeline {
   content: '';
   height:70vh;
@@ -14,35 +9,26 @@
   bottom: 0;
   left: 48.5%;
   z-index: 0;
-  // margin-left: -3px;
-}
-
-.b-icon--circle{
-  // text-align: center;
-  // margin-right: 3.4%;
-  margin: auto 0;
- 
 }
 
 .chronology {
+  height:calc(100vh - 12rem);
   text-align: center;
   margin: 0 auto;
-  width: 45.75rem;
-  z-index: 2;
+  width: 80vw;
+
+  // z-index: 2;
 
     &__card {
       width: 22.8rem ;
-      // width: 50%;
       border-top: 2px solid white;
       float: left;
       
       
       & p {
-        // text-align: center;
         padding: 0.25rem;
       } 
      
-
     }
     &__card__img {
       object-fit: cover;
@@ -68,7 +54,7 @@
 .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 30px;
     height: 30px;
-    left: 52.25%;
+    left: 51.35%;
     margin-left: -30px;
 }
 }
@@ -89,6 +75,7 @@
 .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in, .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
     -webkit-animation: none;
     animation: none;
+    
 }
 }
 

@@ -44,7 +44,7 @@ export function HousesGallery(props) {
                         <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6 App" key={i}>
                             <figure className="character-gallery">
                                 <Link to={'/houses/' + house.name}>
-                                    <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name} />
+                                    <img className="character-gallery__img" src={house.logoURL} alt={house.name} />
                                 </Link>
                             </figure>
                             <figcaption className="c-houses-gallery__figcaption">{house.name}</figcaption>

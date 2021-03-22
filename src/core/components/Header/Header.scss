@@ -1,8 +1,13 @@
 .c-header {
-    width: 100vw;
-    padding: 2rem;
+    width: 90vw;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+    min-height: 100px;
+    position: fixed;
+    // right: 0;
+    top: 0;
+
 }
 
 .c-header-icons__home {
@@ -15,8 +20,8 @@
 
 @media (min-width: 300px) {
     .c-header {
-        padding:1rem 2rem;
-        flex-direction: column;
+        padding:1.2rem 2rem;
+        flex-direction: column-reverse;
 
         &_back {
             flex: 1;
@@ -47,7 +52,6 @@
 
         &_back {
             flex: 1;
-            // background-color: powderblue;
             flex-direction: row;
             align-items: center;
         }
@@ -84,6 +88,6 @@
 
 @media (min-width: 1020px) {
     .c-header {
-        width: 85vw;
+        justify-content: flex-end;
     }
 }

@@ -1,14 +1,12 @@
 
 .character-gallery{
     width: 100%;
-    position: relative;
-    // animation: fadeIn;
     animation-duration: 1s;
     padding: 1.3rem 0;
    
 
     &__img {
-        height: 19rem;
+        height: 20vh;
         width: 100%;
         object-fit: cover;
         object-position: top;
@@ -28,11 +26,31 @@
         opacity: 0;
         transition: opacity 0.3s;
         text-align: center;
-        // & p {
-        //     // vertical-align: middle;
-        // }
+
     }
     &:hover &__figcaption{
         opacity: 1;
     }
+}
+
+@media (min-width: 300px) {
+    .character-gallery {
+        &__img {
+            height: 20vh;
+        }
+    }
+}
+
+// @media (min-width: 576px) {
+
+// }
+
+
+@media (min-width: 1020px) {
+    .character-gallery {
+        &__img {
+            height: 30vh;
+        }
+    }
+
 }
