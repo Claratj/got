@@ -38,18 +38,17 @@
 
 @media (min-width: 576px) {
     .footer {
-        &__link {
-            font-size: 2.5rem;
-        }
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 9vw;
+   
     }
 }
 
 @media (min-width: 1020px) {
     .footer {
         height: 140px;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 9vw;
+
     &__link {
             font-size: 2.5rem;
             padding: 0.8;
