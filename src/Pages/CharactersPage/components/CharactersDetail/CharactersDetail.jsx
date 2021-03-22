@@ -73,7 +73,7 @@ export function CharactersDetail() {
 
     return (
         <div className="gallery-detail">
-            <Header house={true} arrow={'/characters'} fnLanguage={changeLanguage} />
+            <Header house={true} arrow={true} fnLanguage={changeLanguage} />
             <div className="d-flex justify-content-center align-items-center">
                 {character && <figure>
                     <div className="gallery-detail_pic">

@@ -23,9 +23,6 @@ export function Header(props) {
         history.goBack()
     }
 
-    // (props.character === true) ? () => history.push('/characters') : () => history.push('/houses')
-
-
     return (
 
         <div className="c-header">

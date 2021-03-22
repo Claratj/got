@@ -88,7 +88,7 @@ export function ChronologyPage(props) {
 
   return (
     <div className="gallery-container">
-      <Header house={true} fnLanguage={changeLanguage} />
+      <Header arrow={'/characters'} house={true} fnLanguage={changeLanguage} />
 
       <div className="gallery">
         <div className="chronology">
