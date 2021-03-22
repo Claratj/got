@@ -106,15 +106,10 @@ li {
 }
 
 @media (min-width: 300px) {
-    // .gallery-detail {
-    //     width: 100%;
 
-    // }
 
     .c-houses-detail {
-        // &_pic {
-        //     margin-top: 5rem;
-        // }
+   
         &__figcaption {
             padding-bottom: 1rem;
             border-bottom: solid #6c6c6c 1px;
@@ -130,8 +125,7 @@ li {
     }
     .gallery-detail_table{
         flex-direction: column;
-        // margin-bottom: 5rem;
-        // overflow-y: scroll;
+       
     }
 }
 
@@ -143,11 +137,7 @@ li {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        // flex-wrap: wrap;
-        // height: fit-content;
-        // margin-bottom: 5rem;
-        // overflow-y: scroll;
-    }
+        }
     .c-houses-detail {
         &__img {
             width: 80vw;
@@ -162,5 +152,25 @@ li {
 }
 
 @media (min-width: 768px) {
+    .c-houses-detail {
 
+        &__col {
+            width: 30vw;
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    .gallery-detail_table{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        }
+    .c-houses-detail {
+        &__col {
+            width: 15vw;
+            padding: 0 1.5rem;
+        }
+    }
 }
