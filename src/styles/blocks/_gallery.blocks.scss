@@ -163,13 +163,19 @@ li {
 
 @media (min-width: 1020px) {
     .gallery-detail_table{
+        width: 80vw;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         }
+    
     .c-houses-detail {
+        &__figcaption{
+            border-bottom: none;
+
+        }
         &__col {
-            width: 15vw;
+            width: 13vw;
             padding: 0 1.5rem;
         }
     }
