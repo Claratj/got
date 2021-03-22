@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import { LoadingContext } from './contexts/LoadingContext';
 import './Loading.scss'
 
-export function Loading(){
+export function Loading() {
 
-const {isLoading} = useContext(LoadingContext);
+    const { isLoading } = useContext(LoadingContext);
 
-return(
-    isLoading && <div className='c-loading'>
-        <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
-    </div>
-);
+    return (
+        isLoading && <div className='c-loading'>
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+    );
 }

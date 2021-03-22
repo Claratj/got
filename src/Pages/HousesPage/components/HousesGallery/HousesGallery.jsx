@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../../../../core/components/Footer/Footer';
-
-
-import "./HouseGallery.scss"
 import { Header } from "../../../../core/components/Header/Header";
 
 
@@ -44,8 +41,8 @@ export function HousesGallery(props) {
                 {filterHouses
                     .filter(house => house.logoURL)
                     .map((house, i) =>
-                        <div className="col-12 col-sm-4 col-md-2 col-lg-2 App" key={i}>
-                            <figure className="c-houses-gallery__figure">
+                        <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6 App" key={i}>
+                            <figure className="character-gallery">
                                 <Link to={'/houses/' + house.name}>
                                     <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name} />
                                 </Link>
@@ -54,7 +51,6 @@ export function HousesGallery(props) {
                         </div>
 
                     )}
-
             </div>
             <Footer />
         </div>
