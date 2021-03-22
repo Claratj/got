@@ -49,23 +49,23 @@ export function CharactersDetail() {
     if (allegiances != undefined) {
 
         listAllegiances = allegiances.map((allegiance, i) =>
-            <li key={i}>{allegiance}</li>
+            <li className="c-houses-detail__li" key={i}>{allegiance}</li>
         );
     }
 
     if (appearances != undefined) {
         listAppearances = appearances.map((appearance, i) =>
-            <li key={i}>{appearance}</li>
+            <li className="c-houses-detail__li" key={i}>{appearance}</li>
         );
     }
     if (siblings != undefined) {
         listSiblings = siblings.map((sibling, i) =>
-            <li key={i}>{sibling}</li>
+            <li className="c-houses-detail__li" key={i}>{sibling}</li>
         );
     }
     if (titles != undefined) {
         listTitles = titles.map((title, i) =>
-            <li key={i}>{title}</li>
+            <li className="c-houses-detail__li" key={i}>{title}</li>
         );
     }
 

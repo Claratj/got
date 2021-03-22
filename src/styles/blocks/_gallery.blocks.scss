@@ -40,7 +40,6 @@ li {
     margin: 0 auto;
 
     &_pic{
-        height: 380px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -121,7 +120,7 @@ li {
             border-bottom: solid #6c6c6c 1px;
         }
         &__col {
-            margin: 2rem 0;
+            margin: 1.5rem auto;
             width: 80vw;
         }
         &__td {
@@ -130,7 +129,6 @@ li {
     
     }
     .gallery-detail_table{
-        // height: fit-content;
         flex-direction: column;
         // margin-bottom: 5rem;
         // overflow-y: scroll;
@@ -139,11 +137,12 @@ li {
 
 @media (min-width: 576px) {
     .gallery-detail_table{
-        justify-content: space-between;
-        align-items: center;
         width: 100vw;
         height: fit-content;
-        
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         // flex-wrap: wrap;
         // height: fit-content;
         // margin-bottom: 5rem;
@@ -155,7 +154,8 @@ li {
             margin-bottom: 3rem;
             }
         &__col {
-            width: 30vw;
+            width: 50vw;
+            padding: 0 1.5rem;
         }
 
     }
