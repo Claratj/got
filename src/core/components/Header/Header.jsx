@@ -19,12 +19,19 @@ export function Header(props) {
         props.fnLanguage('es');
     }
 
+    const goTopreviousPath = () => {
+        history.goBack()
+    }
+
+    // (props.character === true) ? () => history.push('/characters') : () => history.push('/houses')
+
+
     return (
 
         <div className="c-header">
 
             {props.arrow &&
-                <div className="c-header_back" onClick={props.houseDetail ? () => history.push('/houses') : () => history.push('/characters')}>
+                <div className="c-header_back" onClick={goTopreviousPath}>
                     <span className="icon-Vector b-icon b-icon--arrow" ></span>
                     <p className=" b-icon b-icon--arrow--font">Volver</p>
                 </div>
