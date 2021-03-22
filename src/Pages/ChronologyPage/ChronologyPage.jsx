@@ -89,28 +89,6 @@ export function ChronologyPage(props) {
   return (
     <div className="gallery-container">
       <Header house={true} fnLanguage={changeLanguage} />
-      {/* <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
-        "icon-circle-down b-icon b-icon--circle"}>
-      </span> */}
-      {/*<div className="gallery gallery_chr">
-        <div className="chronology">
-
-          {timeline.map((item, i) =>
-
-            <div className="chronology__card" key={i} style={
-              i % 2 ? { "margin-top": "10.5rem", } :
-                { "margin-top": "0px", }}>
-              <p> {item.age && item.age.age} </p>
-              <p>{item.name}</p>
-              <img className="chronology__card__img" src={item.image} alt={item.name} />
-            </div>
-
-          )}
-
-
-        </div>
-      </div>
-      <div className="timeline"></div> */}
 
       <div className="gallery">
         <div className="chronology">

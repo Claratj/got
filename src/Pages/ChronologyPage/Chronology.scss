@@ -12,10 +12,11 @@
 }
 
 .chronology {
+  height:calc(100vh - 12rem);
   text-align: center;
   margin: 0 auto;
   width: 85vw;
-  z-index: 2;
+  // z-index: 2;
 
     &__card {
       width: 22.8rem ;
