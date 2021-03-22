@@ -16,7 +16,7 @@
 @media (min-width: 300px) {
     .c-header {
         padding:1rem 2rem;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         &_back {
             flex: 1;
