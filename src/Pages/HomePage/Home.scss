@@ -5,12 +5,11 @@
     background-position: center;
     background-size: cover;
 
-    &__title-container{
+    &_title-container{
         height: 44.375rem;
-        // background-color: salmon;
     }
     
-    &__title{
+    &_title{
         position: relative;
         text-align: center;
         font-size: 8.75rem;
@@ -20,6 +19,21 @@
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
+
+    }
+}
+
+
+
+@media (min-width: 300px) {
+    .c-home{
+        // &__title-container{
+        //     height: 100vh;
+        // }
+        &_title {
+            font-size: 3rem;
+            
+        }
 
     }
 }
