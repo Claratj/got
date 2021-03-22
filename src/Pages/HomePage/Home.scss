@@ -15,7 +15,6 @@
     &_title{
         // position: relative;
         text-align: center;
-        font-size: 8.75rem;
         font-weight: normal;
         color: var(--white);
         // top: 50%;
@@ -30,11 +29,33 @@
 
 @media (min-width: 300px) {
     .c-home{
-
         &_title {
             font-size: 3rem;
-
         }
+    }
+}
 
+
+@media (min-width: 576px) {
+    .c-home{
+        &_title {
+            font-size: 4.5rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .c-home{
+        &_title {
+            font-size: 6.5rem;
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    .c-home{
+        &_title {
+            font-size: 8.75rem;
+        }
     }
 }
