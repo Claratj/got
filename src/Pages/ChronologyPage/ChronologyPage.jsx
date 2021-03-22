@@ -112,16 +112,15 @@ export function ChronologyPage(props) {
       </div>
       <div className="timeline"></div> */}
 
-      <div className="gallery gallery_chr">
+      <div className="gallery">
         <div className="chronology">
 
           <span onClick={reverseTimelineOrder} className={ascendingOrder ? "icon-circle-up b-icon b-icon--circle" :
             "icon-circle-down b-icon b-icon--circle"}>
           </span>
+
           <VerticalTimeline>
-
             {timeline.map((item, i) =>
-
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ "background-color": '#000', color: '#fff' }}
@@ -131,9 +130,7 @@ export function ChronologyPage(props) {
                 <p>{item.age && item.age.age}</p>
                 <p>{item.name}</p>
                 <img className="chronology__card__img" src={item.image} alt={item.name} />
-
               </VerticalTimelineElement>)}
-
           </VerticalTimeline>
         </div>
       </div>
