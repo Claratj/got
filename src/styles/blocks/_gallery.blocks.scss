@@ -1,3 +1,8 @@
+body{
+    background-color: #000000;
+}
+
+
 .gallery-container {
     width: 90%;
     margin: 0 auto;
@@ -51,6 +56,18 @@ li {
         display: flex;
     }
 }
+
+.c-houses-gallery{
+    &__img{
+        // height: 18.563rem;
+        object-fit: contain;
+    }
+
+    &__figure{
+        margin:0;
+    }
+}
+
 
 .c-houses-detail{
 
@@ -106,6 +123,11 @@ li {
 }
 
 @media (min-width: 300px) {
+
+    .gallery {
+        height:calc(100vh - 17rem);
+        padding-right: 1.5rem;
+    }
 
 
     .c-houses-detail {
