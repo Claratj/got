@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../../../../core/components/Footer/Footer';
-
-
-import "./HouseGallery.scss"
 import { Header } from "../../../../core/components/Header/Header";
 
 
@@ -54,7 +51,6 @@ export function HousesGallery(props) {
                         </div>
 
                     )}
-
             </div>
             <Footer />
         </div>
