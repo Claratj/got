@@ -44,8 +44,8 @@ export function HousesGallery(props) {
                 {filterHouses
                     .filter(house => house.logoURL)
                     .map((house, i) =>
-                        <div className="col-12 col-sm-4 col-md-2 col-lg-2 App" key={i}>
-                            <figure className="c-houses-gallery__figure">
+                        <div className="col-md-4 col-lg-2 col-xl-2 col-sm-4 col-6 App" key={i}>
+                            <figure className="character-gallery">
                                 <Link to={'/houses/' + house.name}>
                                     <img className="c-houses-gallery__img" src={house.logoURL} alt={house.name} />
                                 </Link>
